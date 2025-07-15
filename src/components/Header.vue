@@ -1,0 +1,40 @@
+<template>
+	<nav class="flex justify-center gap-4 py-4 shadow-md">
+		<router-link
+			to="/"
+			class="hover:text-pink-500"
+			>홈</router-link
+		>
+		<router-link
+			to="/invitation"
+			class="hover:text-pink-500"
+			>청첩장</router-link
+		>
+		<router-link
+			to="/gallery"
+			class="hover:text-pink-500"
+			>갤러리</router-link
+		>
+		<router-link
+			to="/location"
+			class="hover:text-pink-500"
+			>오시는길</router-link
+		>
+		<router-link
+			to="/rsvp"
+			class="hover:text-pink-500"
+			>참석여부</router-link
+		>
+		<router-link
+			to="/message"
+			class="hover:text-pink-500"
+			>축하메시지</router-link
+		>
+		<router-link
+			to="/contact"
+			class="hover:text-pink-500"
+			>연락처</router-link
+		>
+	</nav>
+</template>
+<script></script>
