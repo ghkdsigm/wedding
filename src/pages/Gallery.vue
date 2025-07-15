@@ -1,51 +1,49 @@
 <template>
-	<section class="absolute w-full h-full overflow-hidden">
-		<!-- 메인 이미지 전체 채우기 -->
-		<Swiper
-			:modules="[Thumbs]"
-			:thumbs="{ swiper: thumbsSwiper }"
-			:slidesPerView="1"
-			:loop="true"
-			class="relative top-0 left-0 w-full h-full z-0"
-		>
-			<SwiperSlide
-				v-for="(img, i) in images"
-				:key="i"
-				class="w-full h-full"
+	<section class="absolute w-screen h-screen bg-black overflow-hidden">
+		<div class="">
+			<!-- 메인 이미지 Swiper -->
+			<Swiper
+				:modules="[Thumbs]"
+				:thumbs="{ swiper: thumbsSwiper }"
+				:loop="true"
+				:slidesPerView="1"
+				class="w-full h-full z-0"
 			>
-				<img
-					:src="img"
-					class="w-full object-cover"
-					alt="메인 이미지"
-				/>
-			</SwiperSlide>
-		</Swiper>
-
-		<!-- 썸네일: 메인 위에 겹쳐진 float 스타일 -->
-		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 w-full flex justify-center pointer-events-none">
-			<div class="w-[90%] max-w-sm pointer-events-auto">
-				<Swiper
-					:modules="[FreeMode, Thumbs]"
-					@swiper="setThumbsSwiper"
-					:spaceBetween="8"
-					:slidesPerView="'auto'"
-					freeMode
-					watchSlidesProgress
-					centeredSlides
+				<SwiperSlide
+					v-for="(img, i) in images"
+					:key="i"
 				>
-					<SwiperSlide
-						v-for="(img, i) in images"
-						:key="i"
-						class="w-[60px] sm:w-[72px] cursor-pointer"
-					>
-						<img
-							:src="img"
-							class="h-16 w-full object-cover rounded-md border-2 border-white shadow-md hover:border-pink-400 transition"
-							alt="썸네일"
-						/>
-					</SwiperSlide>
-				</Swiper>
-			</div>
+					<img
+						:src="img"
+						class="w-full h-full object-cover block"
+						alt="메인 이미지"
+					/>
+				</SwiperSlide>
+			</Swiper>
+		</div>
+		<!-- 썸네일 Swiper (메인 위에 겹쳐서 작게 떠 있음) -->
+		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
+			<Swiper
+				@swiper="setThumbsSwiper"
+				:modules="[FreeMode, Thumbs]"
+				:spaceBetween="8"
+				:slidesPerView="'auto'"
+				freeMode
+				watchSlidesProgress
+				class="px-1"
+			>
+				<SwiperSlide
+					v-for="(img, i) in images"
+					:key="i"
+					class="w-[64px] h-[64px] cursor-pointer overflow-hidden rounded border-2 border-white hover:border-pink-400 transition"
+				>
+					<img
+						:src="img"
+						class="w-full h-full object-cover"
+						alt="썸네일"
+					/>
+				</SwiperSlide>
+			</Swiper>
 		</div>
 	</section>
 </template>
