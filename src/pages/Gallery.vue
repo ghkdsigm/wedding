@@ -1,45 +1,41 @@
 <template>
 	<section class="absolute w-screen h-screen bg-black overflow-hidden">
-		<div class="">
-			<!-- 메인 이미지 Swiper -->
-			<Swiper
-				:modules="[Thumbs]"
-				:thumbs="{ swiper: thumbsSwiper }"
-				:loop="true"
-				:slidesPerView="1"
-				class="w-full h-full z-0"
+		<!-- 메인 Swiper -->
+		<Swiper
+			:modules="[Thumbs]"
+			:thumbs="{ swiper: thumbsSwiper }"
+			:loop="true"
+			:slidesPerView="1"
+			class="w-full h-full z-0"
+		>
+			<SwiperSlide
+				v-for="(img, i) in images"
+				:key="i"
 			>
-				<SwiperSlide
-					v-for="(img, i) in images"
-					:key="i"
-				>
-					<img
-						:src="img"
-						class="w-full h-full object-cover block"
-						alt="메인 이미지"
-					/>
-				</SwiperSlide>
-			</Swiper>
-		</div>
-		<!-- 썸네일 Swiper (메인 위에 겹쳐서 작게 떠 있음) -->
-		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
+				<img
+					:src="img"
+					class="w-full h-full object-cover"
+					alt="메인 이미지"
+				/>
+			</SwiperSlide>
+		</Swiper>
+
+		<!-- 썸네일 Swiper -->
+		<div class="absolute bottom-[15vh] left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
 			<Swiper
 				@swiper="setThumbsSwiper"
-				:modules="[FreeMode, Thumbs]"
-				:spaceBetween="8"
-				:slidesPerView="'auto'"
-				freeMode
-				watchSlidesProgress
-				class="px-1"
+				:modules="[Thumbs]"
+				:spaceBetween="12"
+				:slidesPerView="3"
 			>
 				<SwiperSlide
 					v-for="(img, i) in images"
 					:key="i"
-					class="w-[64px] h-[64px] cursor-pointer overflow-hidden rounded border-2 border-white hover:border-pink-400 transition"
+					class="cursor-pointer overflow-hidden rounded border-2 border-white hover:border-pink-400 transition"
 				>
 					<img
 						:src="img"
-						class="w-full h-full object-cover"
+						class="w-full h-[15vh] object-cover"
 						alt="썸네일"
 					/>
 				</SwiperSlide>
@@ -51,10 +47,9 @@
 <script setup>
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { FreeMode, Thumbs } from 'swiper/modules'
+import { Thumbs } from 'swiper/modules'
 
 import 'swiper/css'
-import 'swiper/css/free-mode'
 import 'swiper/css/thumbs'
 
 const images = [

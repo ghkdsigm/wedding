@@ -2,7 +2,6 @@
 	<div class="font-sans text-gray-800">
 		<Header />
 		<router-view />
-		<div class="bg-red-500 text-white p-4 text-center">Tailwind 테스트: 이게 빨간 배경이면 성공!</div>
 		<Footer />
 	</div>
 </template>
