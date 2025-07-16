@@ -1,14 +1,14 @@
 <template>
 	<div class="font-sans text-gray-800">
-		<Header />
+		<!-- <Header /> -->
 		<router-view />
-		<Footer />
+		<Bottom />
 	</div>
 </template>
 
 <script setup>
 import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import Bottom from './components/Bottom.vue'
 </script>
 
 <style scoped>

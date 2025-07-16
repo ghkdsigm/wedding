@@ -1,5 +1,5 @@
 <template>
-	<section class="absolute w-screen h-screen bg-black overflow-hidden">
+	<section class="relative w-screen h-screen bg-black overflow-hidden">
 		<!-- 메인 Swiper -->
 		<Swiper
 			:modules="[Thumbs]"
@@ -7,6 +7,7 @@
 			:loop="true"
 			:slidesPerView="1"
 			class="w-full h-full z-0"
+			@slideChange="onMainSlideChange"
 		>
 			<SwiperSlide
 				v-for="(img, i) in images"
@@ -27,11 +28,16 @@
 				:modules="[Thumbs]"
 				:spaceBetween="12"
 				:slidesPerView="3"
+				:centeredSlides="true"
 			>
 				<SwiperSlide
 					v-for="(img, i) in images"
 					:key="i"
-					class="cursor-pointer overflow-hidden rounded border-2 border-white hover:border-pink-400 transition"
+					class="cursor-pointer overflow-hidden rounded border-2 transition duration-300"
+					:class="{
+						'border-pink-400 opacity-100': i === activeThumbIndex,
+						'border-white opacity-40': i !== activeThumbIndex,
+					}"
 				>
 					<img
 						:src="img"
@@ -52,6 +58,8 @@ import { Thumbs } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/thumbs'
 
+const activeThumbIndex = ref(0)
+
 const images = [
 	'https://cdn.crowdpic.net/detail-thumb/thumb_d_1F5AF0BCBB2F43EF3C5B79DA763D3CFB.jpg',
 	'https://png.pngtree.com/thumb_back/fh260/background/20210316/pngtree-vertical-version-of-romantic-spring-cherry-blossom-photography-image_586813.jpg',
@@ -62,7 +70,18 @@ const images = [
 ]
 
 const thumbsSwiper = ref(null)
+
 const setThumbsSwiper = swiper => {
 	thumbsSwiper.value = swiper
+}
+
+const onMainSlideChange = swiper => {
+	const realIndex = swiper.realIndex
+	activeThumbIndex.value = realIndex
+
+	// 여기서 썸네일 Swiper를 가운데로 이동시킴
+	if (thumbsSwiper.value) {
+		thumbsSwiper.value.slideTo(realIndex)
+	}
 }
 </script>
