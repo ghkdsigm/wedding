@@ -7,8 +7,8 @@
 		<div class="flex gap-4 ml-4">
 			<!-- '결혼합니다' 세로 (오른쪽) -->
 			<div
-				class="flex flex-col items-center leading-none text-8xl font-medium text-white"
-				style="font-family: 'Gana ', sans-serif"
+				class="flex flex-col items-center leading-none text-8xl font- text-white"
+				style="font-family: 'Kyobo', sans-serif"
 			>
 				<span>결</span>
 				<span>혼</span>
@@ -20,7 +20,7 @@
 			<!-- '저희' 세로 (왼쪽) -->
 			<div
 				class="flex flex-col items-center leading-none text-8xl font-medium text-white"
-				style="font-family: 'Gana ', sans-serif"
+				style="font-family: 'Kyobo', sans-serif"
 			>
 				<span>저</span>
 				<span>희</span>
