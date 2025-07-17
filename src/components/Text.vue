@@ -1,10 +1,10 @@
 <template>
-	<section class="absolute p-6 z-10">
+	<section class="absolute z-10 p-6 h-full flex flex-col justify-end">
 		<!-- 상단 좌측 가로 텍스트 -->
 		<div class="text-white text-base sm:text-lg font-light mb-10">SEUNGH HYUN & JUNG MIN</div>
 
 		<!-- 세로 텍스트: 좌측 정렬 -->
-		<div class="flex gap-4 ml-4">
+		<div class="flex gap-4 ml-[10vw]">
 			<div
 				class="flex flex-col items-center gap-4 leading-none text-[3vw] font-light text-white"
 				style="font-family: 'Pretendard', sans-serif"
@@ -21,11 +21,11 @@
 				<span>y</span>
 			</div>
 			<div
-				class="flex flex-col items-center leading-none text-8xl font-medium text-white w-[1px] h-[50vh] bg-white"
+				class="flex flex-col items-center leading-none text-6xl font-medium text-white w-[1px] h-[50vh] bg-white"
 			></div>
 			<!-- '결혼합니다' 세로 (오른쪽) -->
 			<div
-				class="flex flex-col items-center leading-none text-8xl font-medium text-white"
+				class="flex flex-col items-center leading-none text-6xl font-medium text-white"
 				style="font-family: 'Kyobo', sans-serif"
 			>
 				<span>결</span>
@@ -37,7 +37,7 @@
 
 			<!-- '저희' 세로 (왼쪽) -->
 			<div
-				class="flex flex-col items-center leading-none text-8xl font-medium text-white"
+				class="flex flex-col items-center leading-none text-6xl font-medium text-white"
 				style="font-family: 'Kyobo', sans-serif"
 			>
 				<span>저</span>

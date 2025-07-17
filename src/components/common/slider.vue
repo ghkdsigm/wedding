@@ -22,7 +22,7 @@
 		</Swiper>
 
 		<!-- 썸네일 Swiper -->
-		<div class="absolute bottom-[15vh] left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
+		<div class="absolute bottom-[5vh] left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
 			<Swiper
 				@swiper="setThumbsSwiper"
 				:modules="[Thumbs]"
