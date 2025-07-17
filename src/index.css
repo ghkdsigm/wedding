@@ -61,6 +61,14 @@ body {
 	font-style: normal;
 	font-display: block;
 }
+@font-face {
+	font-family: 'Gana';
+	font-weight: 300;
+	src: url('@/assets/fonts/Ghanachocolate.ttf') format('truetype');
+	src: url('@/assets/fonts/Ghanachocolate.otf') format('opentype');
+	font-style: normal;
+	font-display: block;
+}
 
 /* button {
 	@apply focus:outline-none;

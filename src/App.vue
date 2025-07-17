@@ -11,6 +11,7 @@
 
 		<!-- <Header /> -->
 		<router-view />
+		<FallingPetals />
 	</div>
 </template>
 
@@ -18,6 +19,7 @@
 import { ref, onMounted } from 'vue'
 import Header from './components/Header.vue'
 import Bottom from './components/Bottom.vue'
+import FallingPetals from '@/components/common/FallingPetals.vue'
 
 const userType = ref(null)
 

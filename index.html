@@ -12,6 +12,10 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Wedding</title>
+		<link
+			rel="stylesheet"
+			href="/node_modules/sakura-js/sakura.min.css"
+		/>
 	</head>
 	<body>
 		<div id="app"></div>
@@ -19,5 +23,9 @@
 			type="module"
 			src="/src/main.js"
 		></script>
+		<script src="/node_modules/sakura-js/sakura.min.js"></script>
+		<script>
+			var sakura = new Sakura('body')
+		</script>
 	</body>
 </html>
