@@ -22,7 +22,7 @@
 		</Swiper>
 
 		<!-- 썸네일 Swiper -->
-		<div class="absolute bottom-[5vh] left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
+		<div class="absolute bottom-[7vh] left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
 			<Swiper
 				@swiper="setThumbsSwiper"
 				:modules="[Thumbs]"
@@ -36,7 +36,7 @@
 					class="cursor-pointer overflow-hidden rounded border-2 transition duration-300"
 					:class="{
 						'border-pink-400 opacity-100': i === activeThumbIndex,
-						'border-white opacity-40': i !== activeThumbIndex,
+						'border-white opacity-70': i !== activeThumbIndex,
 					}"
 				>
 					<img
@@ -47,6 +47,14 @@
 				</SwiperSlide>
 			</Swiper>
 		</div>
+
+		<!-- ▼ 스크롤 버튼 -->
+		<button
+			@click="scrollToNextSection"
+			class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white z-20 text-sm animate-bounce"
+		>
+			Scroll Down
+		</button>
 	</section>
 </template>
 
@@ -79,9 +87,16 @@ const onMainSlideChange = swiper => {
 	const realIndex = swiper.realIndex
 	activeThumbIndex.value = realIndex
 
-	// 여기서 썸네일 Swiper를 가운데로 이동시킴
 	if (thumbsSwiper.value) {
 		thumbsSwiper.value.slideTo(realIndex)
+	}
+}
+
+// ▼ 아래 섹션으로 스크롤하는 함수
+const scrollToNextSection = () => {
+	const section = document.getElementById('second-section')
+	if (section) {
+		section.scrollIntoView({ behavior: 'smooth' })
 	}
 }
 </script>
