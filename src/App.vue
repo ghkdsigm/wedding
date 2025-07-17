@@ -11,7 +11,6 @@
 
 		<!-- <Header /> -->
 		<router-view />
-		<Bottom />
 	</div>
 </template>
 
