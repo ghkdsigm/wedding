@@ -5,9 +5,27 @@
 
 		<!-- 세로 텍스트: 좌측 정렬 -->
 		<div class="flex gap-4 ml-4">
+			<div
+				class="flex flex-col items-center gap-4 leading-none text-[3vw] font-light text-white"
+				style="font-family: 'Pretendard', sans-serif"
+			>
+				<span class="mt-4">M</span>
+				<span>a</span>
+				<span>r</span>
+				<span class="mb-4">k</span>
+				<span>t</span>
+				<span>h</span>
+				<span class="mb-4">e</span>
+				<span>D</span>
+				<span>a</span>
+				<span>y</span>
+			</div>
+			<div
+				class="flex flex-col items-center leading-none text-8xl font-medium text-white w-[1px] h-[50vh] bg-white"
+			></div>
 			<!-- '결혼합니다' 세로 (오른쪽) -->
 			<div
-				class="flex flex-col items-center leading-none text-8xl font- text-white"
+				class="flex flex-col items-center leading-none text-8xl font-medium text-white"
 				style="font-family: 'Kyobo', sans-serif"
 			>
 				<span>결</span>
