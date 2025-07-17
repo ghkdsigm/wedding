@@ -61,12 +61,12 @@ import 'swiper/css/thumbs'
 const activeThumbIndex = ref(0)
 
 const images = [
-	'https://cdn.crowdpic.net/detail-thumb/thumb_d_1F5AF0BCBB2F43EF3C5B79DA763D3CFB.jpg',
-	'https://png.pngtree.com/thumb_back/fh260/background/20210316/pngtree-vertical-version-of-romantic-spring-cherry-blossom-photography-image_586813.jpg',
-	'https://images.pexels.com/photos/9392561/pexels-photo-9392561.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-	'https://png.pngtree.com/thumb_back/fw800/background/20210316/pngtree-vertical-version-pink-photography-picture-cherry-blossom-spring-image_586851.jpg',
-	'https://cdn.crowdpic.net/detail-thumb/thumb_d_5839A8E0D70738F27EB760E9DA6386DA.jpg',
-	'https://product-image.wconcept.co.kr/productimg/image/img0/47/301348247_JD41603.jpg',
+	'https://www.iwedding.co.kr/center/iweddingb/product/800_17588_1730685980_90793400_3232256098.jpg',
+	'https://www.iwedding.co.kr/center/iweddingb/product/800_11243_1716875969_31838900_3232256100.jpg',
+	'https://www.iwedding.co.kr/center/iweddingb/product/800_12710_1716273463_83445300_3232256100.jpg',
+	'https://www.iwedding.co.kr/center/iweddingb/product/800_14165_1711688929_18023400_3232256098.jpg',
+	'https://www.iwedding.co.kr/center/iweddingb/product/800_11806_1736932570_03864000_3232256098.jpg',
+	'https://cdn.imweb.me/upload/S201811245bf8fd46464e7/4eb0cd6ed2285.jpg',
 ]
 
 const thumbsSwiper = ref(null)
