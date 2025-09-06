@@ -69,7 +69,7 @@ const weddingData = {
   imageSrc: '/imgs/wedding.jpg',
   bridegroom: '황승현',
   bride: '김정민',
-  scriptText: 'Together with Cheongsu',
+  scriptText: 'The Start of Our Journey',
   dateText: '2025년 10월 25일 토요일 오전 11시30분',
   venueText: '더퍼스트클래스파티 강서NH서울타워점',
   scriptFontClass: '',
