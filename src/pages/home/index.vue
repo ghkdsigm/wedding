@@ -65,14 +65,14 @@ import Section06 from '@/components/home/section06.vue'
 // 부모에서 모든 웨딩 데이터 관리
 const weddingData = {
   // Section01 데이터
-  imageSrc: import.meta.env.VITE_WEDDING_IMAGE || '/src/assets/imgs/wedding.jpg',
+  imageSrc: '/src/assets/imgs/wedding.jpg',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'Together with Cheongsu',
   dateText: '2025년 10월 25일 토요일 오후 1시',
   venueText: '더퍼스트클래스파티 강서NH서울타워점',
   scriptFontClass: '',
-  weddingDate: import.meta.env.VITE_WEDDING_DATE || '2025-10-25', // D-Day 계산용 (YYYY-MM-DD 형식)
+  weddingDate: '2025-10-25', // D-Day 계산용 (YYYY-MM-DD 형식)
   
   // Section02 데이터
   bodyText: {
@@ -113,42 +113,34 @@ const weddingData = {
   userType: 'guest', // 'guest' 또는 'nonGuest'
   
   // Section03 데이터
-  kakaoKey: import.meta.env.VITE_KAKAO_MAP_KEY || 'your_kakao_map_key_here',
-  venueName: import.meta.env.VITE_VENUE_NAME || '더퍼스트클래스파티 강서NH서울타워점',
-  address: import.meta.env.VITE_VENUE_ADDRESS || '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
-  tel: import.meta.env.VITE_VENUE_TEL || '02-2013-5670',
-  lat: parseFloat(import.meta.env.VITE_VENUE_LAT) || 37.514542,
-  lng: parseFloat(import.meta.env.VITE_VENUE_LNG) || 127.031708,
-  level: parseInt(import.meta.env.VITE_VENUE_LEVEL) || 3,
-  subwayInfo: import.meta.env.VITE_SUBWAY_INFO || '증미역 3번 출구에서 56m NH서울타워 20층 도보 1분',
-  busInfo: import.meta.env.VITE_BUS_INFO || '간선: 47, 240, 463\n지선: 4211\n마을: 강남08',
-  parkingInfo: import.meta.env.VITE_PARKING_INFO || '강서NH서울타워점 주차장 이용',
+  kakaoKey: 'ae118806548ca1d60ddf5d35da105e7f', // 실제 카카오 맵 API 키로 교체 필요
+  venueName: '더퍼스트클래스파티 강서NH서울타워점',
+  address: '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
+  tel: '02-2013-5670',
+  lat: 37.514542,
+  lng: 127.031708,
+  level: 3,
+  subwayInfo: '증미역 3번 출구에서 56m NH서울타워 20층 도보 1분',
+  busInfo: '간선: 47, 240, 463\n지선: 4211\n마을: 강남08',
+  parkingInfo: '강서NH서울타워점 주차장 이용',
   
   // Section04 데이터
-  noticeAccounts: import.meta.env.VITE_NOTICE_ACCOUNTS ? [import.meta.env.VITE_NOTICE_ACCOUNTS] : [
+  noticeAccounts: [
     '농협 123-456788-7654321 예금주: 이지훈'
   ],
-  extraNotice: import.meta.env.VITE_EXTRA_NOTICE || '화환은 정중히 사양합니다.',
+  extraNotice: '화환은 정중히 사양합니다.',
   sectionTitle: '마음 전하실 곳',
   sectionSubtitle: '마음을 전해주실 분들을 위해 계좌번호를 안내해드립니다.',
   groomLabel: '신랑측',
   brideLabel: '신부측',
-  groomAccounts: import.meta.env.VITE_GROOM_ACCOUNTS ? 
-    import.meta.env.VITE_GROOM_ACCOUNTS.split(',').map(acc => {
-      const [bank, number, holder] = acc.trim().split(' ')
-      return { bank, number, holder }
-    }) : [
-      { bank: '신한', number: '110-377-929023', holder: '황승현' },
-      { bank: '토스', number: '1000-1234-5678', holder: '황운' }
-    ],
-  brideAccounts: import.meta.env.VITE_BRIDE_ACCOUNTS ? 
-    import.meta.env.VITE_BRIDE_ACCOUNTS.split(',').map(acc => {
-      const [bank, number, holder] = acc.trim().split(' ')
-      return { bank, number, holder }
-    }) : [
-      { bank: '신한', number: '444-55-666666', holder: '김정민' },    
-      { bank: '신한', number: '444-55-666666', holder: '권숙희' }
-    ],
+  groomAccounts: [
+    { bank: '신한', number: '110-377-929023', holder: '황승현' },
+    { bank: '토스', number: '1000-1234-5678', holder: '황운' }
+  ],
+  brideAccounts: [
+    { bank: '신한', number: '444-55-666666', holder: '김정민' },    
+    { bank: '신한', number: '444-55-666666', holder: '권숙희' }
+  ],
     
   // Section05 데이터
   year: 2025,
