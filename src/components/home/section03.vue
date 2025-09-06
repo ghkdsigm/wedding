@@ -44,7 +44,7 @@
       </div> -->
 
       <!-- Guides -->
-      <div class="mt-3 space-y-5">
+      <div class="pt-4 space-y-5">
         <div>
           <h4 class="text-[clamp(10px,3.25vw,16px)] font-bold">지하철안내</h4>
           <p class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-1 leading-6">{{ subwayInfo }}</p>
@@ -116,8 +116,27 @@ async function init() {
     map.addControl(new window.kakao.maps.MapTypeControl(), window.kakao.maps.ControlPosition.TOPRIGHT)
     map.addControl(new window.kakao.maps.ZoomControl(), window.kakao.maps.ControlPosition.RIGHT)
 
-    marker = new window.kakao.maps.Marker({ position: center })
+    // 마커 생성 및 설정
+    marker = new window.kakao.maps.Marker({ 
+      position: center,
+      title: props.venueName || '웨딩홀'
+    })
     marker.setMap(map)
+
+    // 인포윈도우 생성
+    const infowindow = new window.kakao.maps.InfoWindow({
+      content: `<div style="padding:10px; text-align:center; font-size:12px; font-weight:bold;">${props.venueName || '웨딩홀'}</div>`
+    })
+    
+    // 지도 로드 완료 후 자동으로 인포윈도우 표시
+    window.kakao.maps.event.addListener(map, 'tilesloaded', function() {
+      infowindow.open(map, marker)
+    })
+    
+    // 마커 클릭 시에도 인포윈도우 표시 (선택사항)
+    window.kakao.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker)
+    })
 
     loading.value = false
   })

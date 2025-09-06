@@ -47,6 +47,14 @@
       :bride-accounts="weddingData.brideAccounts"
     />
 
+    <Section07
+      :kakao-key="weddingData.kakaoKey"
+      :title="weddingData.shareTitle"
+      :description="weddingData.shareDescription"
+      :image-url="weddingData.shareImageUrl"
+      :web-url="weddingData.shareWebUrl"
+    />
+
     <!-- <Section06
       :images="weddingData.galleryImages"
     /> -->
@@ -61,6 +69,7 @@ import Section03 from '@/components/home/section03.vue'
 import Section04 from '@/components/home/section04.vue'
 import Section05 from '@/components/home/section05.vue'
 import Section06 from '@/components/home/section06.vue'
+import Section07 from '@/components/home/section07.vue'
 
 // 부모에서 모든 웨딩 데이터 관리
 const weddingData = {
@@ -121,8 +130,8 @@ const weddingData = {
   lat: 37.557129,
   lng: 126.862107,
   level: 3,
-  subwayInfo: '증미역 3번 출구에서 56m NH서울타워 20층 도보 1분',
-  busInfo: '간선: 47, 240, 463\n지선: 4211\n마을: 강남08',
+  subwayInfo: '증미역 3번 출구에서 56m NH서울타워 20층 (도보 1분)',
+  busInfo: '간선(파랑): 47, 240, 463\n지선(초록): 4211\좌석(빨강): 강남08',
   parkingInfo: '강서NH서울타워점 주차장 이용',
   
   // Section04 데이터
@@ -156,7 +165,13 @@ const weddingData = {
     'https://www.iwedding.co.kr/center/iweddingb/product/800_14165_1711688929_18023400_3232256098.jpg',
     'https://www.iwedding.co.kr/center/iweddingb/product/800_11806_1736932570_03864000_3232256098.jpg',
     'https://cdn.imweb.me/upload/S201811245bf8fd46464e7/4eb0cd6ed2285.jpg',
-  ]
+  ],
+
+  // Section07 데이터 (공유)
+  shareTitle: '승현 ♥ 정민 모바일 청첩장',
+  shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
+  shareImageUrl: 'https://adorable-faun-527e08.netlify.app/imgs/wedding.jpg',
+  shareWebUrl: 'https://adorable-faun-527e08.netlify.app/home'
 }
 </script>
 

@@ -39,7 +39,7 @@
       </div>
 
       <!-- Wish form area -->
-      <div class="mt-2 rounded-3xl bg-[#eef5ee] border border-[#e0eadf] p-7 text-center">
+      <!-- <div class="mt-2 rounded-3xl bg-[#eef5ee] border border-[#e0eadf] p-7 text-center">
         <div class="mb-4">
           <svg class="w-7 h-7 text-[#8b9b7a] mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 12c3-1 7-4 9-9 2 5 6 8 9 9-5 2-8 6-9 9-1-3-4-7-9-9Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -51,7 +51,7 @@
           <input v-model="password" type="password" placeholder="비밀번호" class="h-10 rounded-xl border border-[#dee9dc] bg-white px-3 text-[clamp(10px,3.25vw,16px)] outline-none" />
         </div>
         <button class="mt-4 w-full h-10 rounded-xl text-[clamp(10px,3.25vw,16px)] bg-[#6b5a4d] text-white hover:opacity-90" @click="submitDummy">등록</button>
-      </div>
+      </div> -->
     </div>
 
     <!-- Modal for accounts -->

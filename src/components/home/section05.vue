@@ -7,7 +7,7 @@
       <div class="overflow-hidden p-6">
         <!-- Header -->
         <div class="py-4 text-center font-bold">
-          <p class="text-[clamp(16px,5.5vw,28px)]">{{ month }}월</p>
+          <p class="text-[clamp(16px,5.5vw,28px)]">2025.{{ month }}</p>
         </div>
         <div class="h-px bg-[#e8ded0]"></div>
 
