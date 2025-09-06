@@ -5,9 +5,13 @@ import KakaoShareButton from '@/components/KakaoShareButton.vue'
 
 const KAKAO = 'ae118806548ca1d60ddf5d35da105e7f'
 const route = useRoute()
-const currentUrl = computed(() =>
-  new URL(route.fullPath, window.location.origin).toString()
-)
+// const currentUrl = computed(() =>
+//   new URL(route.fullPath, window.location.origin).toString()
+// )
+
+const currentUrl = 'https://adorable-faun-527e08.netlify.app/home'
+
+
 </script>
 
 <template>

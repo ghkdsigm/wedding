@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
 import HomeIndex from '../pages/home/index.vue'
+import ShareIndex from '../pages/share/guest.vue'
 import Invitation from '../pages/Invitation.vue'
 import Wedding from '../pages/Wedding.vue'
 import Location from '../pages/Location.vue'
@@ -11,6 +12,7 @@ import Contact from '../pages/Contact.vue'
 const routes = [
 	{ path: '/', component: Home },
 	{ path: '/home', component: HomeIndex },
+	{ path: '/share', component: ShareIndex },
 	{ path: '/invitation', component: Invitation },
 	{ path: '/wedding', component: Wedding },
 	{ path: '/location', component: Location },
