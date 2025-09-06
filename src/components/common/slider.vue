@@ -25,7 +25,7 @@
 					<h1 class="handwriting-text text-5xl sm:text-8xl text-orange-400">
 						{{ handwritingTexts[i] }}
 					</h1>
-					<h2 class="subtitle-text text-2xl sm:text-4xl text-white mt-4">
+					<h2 class="subtitle-text text-6xl sm:text-4xl text-white mt-4">
 						{{ subtitleTexts[i] }}
 					</h2>
 				</div>
@@ -146,7 +146,6 @@ const scrollToNextSection = () => {
 	font-family: 'Playfair Display', 'Crimson Text', serif !important;
 	font-weight: 300;
 	letter-spacing: 1px;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeInScale {
