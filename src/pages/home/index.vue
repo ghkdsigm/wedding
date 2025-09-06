@@ -63,7 +63,7 @@ import Section06 from '@/components/home/section06.vue'
 // 부모에서 모든 웨딩 데이터 관리
 const weddingData = {
   // Section01 데이터
-  imageSrc: '/src/assets/imgs/wedding.jpg',
+  imageSrc: import.meta.env.VITE_WEDDING_IMAGE || '/src/assets/imgs/wedding.jpg',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'Together with Cheongsu',
@@ -111,7 +111,7 @@ const weddingData = {
   userType: 'guest', // 'guest' 또는 'nonGuest'
   
   // Section03 데이터
-  kakaoKey: import.meta.env.VITE_KAKAO_MAP_KEY || 'eb26875e991edf730a64a0e46c840780',
+  kakaoKey: import.meta.env.VITE_KAKAO_MAP_KEY,
   venueName: import.meta.env.VITE_VENUE_NAME || '더퍼스트클래스파티 강서NH서울타워점',
   address: import.meta.env.VITE_VENUE_ADDRESS || '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
   tel: import.meta.env.VITE_VENUE_TEL || '02-2013-5670',
