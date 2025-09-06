@@ -18,6 +18,18 @@
 					class="w-full h-full object-cover"
 					alt="메인 이미지"
 				/>
+				
+			<!-- 필기체 오버레이 텍스트 -->
+			<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+				<div class="text-center">
+					<h1 class="handwriting-text text-5xl sm:text-8xl text-orange-400">
+						{{ handwritingTexts[i] }}
+					</h1>
+					<h2 class="subtitle-text text-2xl sm:text-4xl text-white mt-4">
+						{{ subtitleTexts[i] }}
+					</h2>
+				</div>
+			</div>
 			</SwiperSlide>
 		</Swiper>
 
@@ -35,8 +47,8 @@
 					:key="i"
 					class="cursor-pointer overflow-hidden rounded border-2 transition duration-300"
 					:class="{
-						'border-pink-400 opacity-100': i === activeThumbIndex,
-						'border-white opacity-70': i !== activeThumbIndex,
+						'border-transparent opacity-100': i === activeThumbIndex,
+						'border-transparent opacity-50': i !== activeThumbIndex,
 					}"
 				>
 					<img
@@ -51,7 +63,7 @@
 		<!-- ▼ 스크롤 버튼 -->
 		<button
 			@click="scrollToNextSection"
-			class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white z-20 text-sm animate-bounce"
+			class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white z-20 text-sm animate-bounce font-goun-batang"
 		>
 			Scroll Down
 		</button>
@@ -70,11 +82,28 @@ const activeThumbIndex = ref(0)
 
 const images = [
 	'https://www.iwedding.co.kr/center/iweddingb/product/800_17588_1730685980_90793400_3232256098.jpg',
-	'https://www.iwedding.co.kr/center/iweddingb/product/800_11243_1716875969_31838900_3232256100.jpg',
 	'https://www.iwedding.co.kr/center/iweddingb/product/800_12710_1716273463_83445300_3232256100.jpg',
 	'https://www.iwedding.co.kr/center/iweddingb/product/800_14165_1711688929_18023400_3232256098.jpg',
 	'https://www.iwedding.co.kr/center/iweddingb/product/800_11806_1736932570_03864000_3232256098.jpg',
 	'https://cdn.imweb.me/upload/S201811245bf8fd46464e7/4eb0cd6ed2285.jpg',
+]
+
+// 각 슬라이드별 필기체 텍스트
+const handwritingTexts = [
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE'
+]
+
+// 각 슬라이드별 서브타이틀 텍스트
+const subtitleTexts = [
+	'Our Story',
+	'Better Together',
+	'Blessed Day',
+	'Happy Moments',
+	'Beautiful Life'
 ]
 
 const thumbsSwiper = ref(null)
@@ -100,3 +129,38 @@ const scrollToNextSection = () => {
 	}
 }
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+.handwriting-text {
+	font-family: 'Dancing Script', 'Great Vibes', 'Parisienne', cursive !important;
+	/* animation: fadeInScale 1.2s ease-out; */
+	font-weight: 400;
+	letter-spacing: 2px;
+	/* transform: rotate(-1deg); */
+}
+
+.subtitle-text {
+	font-family: 'Playfair Display', 'Crimson Text', serif !important;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.7) rotate(-3deg);
+	}
+	50% {
+		opacity: 0.8;
+		transform: scale(1.1) rotate(1deg);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) rotate(-1deg);
+	}
+}
+</style>

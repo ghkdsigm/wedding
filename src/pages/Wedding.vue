@@ -1,5 +1,5 @@
 <template>
-	<Text />
+	<!-- <Text /> -->
 	<Slider />
 	<SectionSecond /> <!-- 추가 -->
 </template>

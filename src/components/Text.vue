@@ -1,7 +1,7 @@
 <template>
 	<section class="absolute z-10 p-6 h-full flex flex-col justify-between items-center pointer-events-none">
 		<!-- 상단 좌측 가로 텍스트 -->
-		<div class="text-white text-[2.5vw] sm:text-lg font-light mb-10">SEUNGH HYUN & JUNG MIN</div>
+		<div class="text-white text-[2.5vw] sm:text-lg font-light mb-10 font-goun-batang">SEUNGH HYUN & JUNG MIN</div>
 
 		<!-- 세로 텍스트: 좌측 정렬 -->
 		<div class="flex gap-4 ml-[10vw] mb-[20vh]">
