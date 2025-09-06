@@ -37,10 +37,10 @@
     const buttons = [
       { title: '모바일 청첩장 보기', link: { mobileWebUrl: props.webUrl, webUrl: props.webUrl } },
     ]
-    if (props.lat != null && props.lng != null) {
-      const map = `https://map.kakao.com/link/map/${encodeURIComponent(props.placeName)},${props.lat},${props.lng}`
-      buttons.push({ title: '길 안내', link: { mobileWebUrl: map, webUrl: map } })
-    }
+    // if (props.lat != null && props.lng != null) {
+    //   const map = `https://map.kakao.com/link/map/${encodeURIComponent(props.placeName)},${props.lat},${props.lng}`
+    //   buttons.push({ title: '길 안내', link: { mobileWebUrl: map, webUrl: map } })
+    // }
   
     window.Kakao.Share.sendDefault({
       objectType: 'feed',
