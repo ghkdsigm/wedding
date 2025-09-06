@@ -116,7 +116,8 @@ function closeModal() {
 
 async function copy(acc) {
   try {
-    await navigator.clipboard.writeText(`${acc.bank} ${acc.number} (예금주: ${acc.holder})`)
+    const numberWithoutHyphens = acc.number.replace(/-/g, '')
+    await navigator.clipboard.writeText(numberWithoutHyphens)
     toast.value = '계좌번호를 복사했어요.'
     setTimeout(() => (toast.value = ''), 1200)
   } catch {

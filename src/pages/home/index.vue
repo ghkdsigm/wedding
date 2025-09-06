@@ -136,7 +136,7 @@ const weddingData = {
   brideLabel: '신부측',
   groomAccounts: [
     { bank: '신한', number: '110-377-929023', holder: '황승현' },
-    { bank: '토스', number: '1000-1234-5678', holder: '황운' }
+    { bank: '국민', number: '848601-04-138274', holder: '황운' }
   ],
   brideAccounts: [
     { bank: '신한', number: '444-55-666666', holder: '김정민' },    

@@ -4,17 +4,17 @@
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
     <div class="relative mx-auto w-full max-w-md px-5 py-5 space-y-4">
-      <!-- Header: venue + actions -->
-      <div class="rounded-xl border border-[#eee] bg-white/90 backdrop-blur p-4 flex gap-3 items-start">
-        <div class="flex-1 min-w-0">
-          <h3 class="text-[clamp(12px,3.75vw,18px)] font-semibold break-words">{{ venueName }}</h3>
-          <p v-if="address" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5 break-words">{{ address }}</p>
-          <p v-if="tel" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5">Tel. {{ tel }}</p>
-        </div>
-        <div class="shrink-0 flex gap-2">
-          <button v-if="tel" @click="callTel" class="rounded-full bg-[#6b5a4d] text-white px-3 py-2 text-[clamp(8px,2.5vw,12px)] shadow">전화</button>
-          <button v-if="address" @click="copyAddress" class="rounded-full border border-[#ddd] px-3 py-2 text-[clamp(8px,2.5vw,12px)] shadow-sm">복사</button>
-        </div>
+      <!-- Header: venue info -->
+      <div class="rounded-xl border border-[#eee] bg-white/90 backdrop-blur p-4">
+        <h3 class="text-[clamp(12px,3.75vw,18px)] font-semibold break-words">{{ venueName }}</h3>
+        <p v-if="address" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5 break-words">{{ address }}</p>
+        <p v-if="tel" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5">Tel. {{ tel }}</p>
+      </div>
+
+      <!-- Action buttons -->
+      <div v-if="tel || address" class="grid grid-cols-2 gap-2">
+        <button v-if="tel" @click="callTel" class="rounded-full bg-[#6b5a4d] text-white px-3 py-2 text-[clamp(8px,2.5vw,12px)] shadow hover:bg-[#5a4a3d] active:scale-95 transition-all duration-150">전화하기</button>
+        <button v-if="address" @click="copyAddress" class="rounded-full border border-[#ddd] px-3 py-2 text-[clamp(8px,2.5vw,12px)] shadow-sm hover:bg-gray-50 active:scale-95 transition-all duration-150">주소 복사</button>
       </div>
 
       <!-- Map area -->
@@ -124,7 +124,14 @@ async function init() {
 }
 
 function callTel() { if (props.tel) window.location.href = `tel:${props.tel}` }
-async function copyAddress() { try { await navigator.clipboard.writeText(`${props.venueName} ${props.address}`.trim()) } catch {} }
+async function copyAddress() { 
+  try { 
+    await navigator.clipboard.writeText(props.venueName)
+    alert('주소가 복사되었습니다.')
+  } catch {
+    alert('복사에 실패했습니다.')
+  } 
+}
 
 // --- Kakao script loader & helpers ---
 let kakaoLoaded = false
