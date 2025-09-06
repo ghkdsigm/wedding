@@ -2,7 +2,7 @@
 
 /* 고운바탕 폰트를 기본으로 설정 */
 body {
-	font-family: 'GounBatang', serif;
+	font-family: 'GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
 	user-select: none;
 	touch-action: pan-y;
 	text-rendering: optimizeLegibility; /* 글꼴 렌더링 최적화 */
@@ -80,27 +80,32 @@ body {
 
 @font-face {
     font-family: 'GounBatang';
-    src: url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Regular.woff2') format('woff2'),
-         url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Regular.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'GounBatang';
-    src: url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Bold.woff2') format('woff2'),
-         url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Bold.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
     font-weight: 700;
     font-display: swap;
+    font-style: normal;
+}
+
+/* 폰트 로딩 강제 적용 */
+* {
+    font-family: 'GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif' !important;
 }
 
 /* Tailwind 클래스 직접 정의 */
 .font-goun-batang {
-    font-family: 'GounBatang', serif;
+    font-family: 'GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif';
 }
 
 .font-goun {
-    font-family: 'GounBatang', serif;
+    font-family: 'GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif';
 }
 
 /* button {

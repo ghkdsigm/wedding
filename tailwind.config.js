@@ -3,9 +3,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['GounBatang', 'serif'],
-				'goun-batang': ['GounBatang', 'serif'],
-				'goun': ['GounBatang', 'serif'],
+				'sans': ['GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif'],
+				'goun-batang': ['GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif'],
+				'goun': ['GounBatang', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif'],
 			},
 		},
 	},
