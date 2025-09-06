@@ -5,7 +5,7 @@
 
     <div class="relative mx-auto w-full max-w-md px-5 py-5 space-y-4">
       <!-- Header: venue + actions -->
-      <div class="rounded-2xl border border-[#eee] bg-white/90 backdrop-blur p-4 flex gap-3 items-start">
+      <div class="rounded-xl border border-[#eee] bg-white/90 backdrop-blur p-4 flex gap-3 items-start">
         <div class="flex-1 min-w-0">
           <h3 class="text-[clamp(12px,3.75vw,18px)] font-semibold break-words">{{ venueName }}</h3>
           <p v-if="address" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5 break-words">{{ address }}</p>
@@ -18,7 +18,7 @@
       </div>
 
       <!-- Map area -->
-      <div class="relative rounded-2xl overflow-hidden border border-[#eee] bg-[#f3f1ef]">
+      <div class="relative rounded-xl overflow-hidden border border-[#eee] bg-[#f3f1ef]">
         <div ref="mapWrap" class="h-[360px] sm:h-[420px] w-full"></div>
         <div v-if="loading" class="absolute inset-0 grid place-items-center text-[clamp(10px,3vw,14px)] text-[#9b948e] bg-white/40 backdrop-blur">지도를 불러오는 중…</div>
       </div>

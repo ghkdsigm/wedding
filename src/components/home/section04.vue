@@ -5,7 +5,7 @@
 
     <div class="relative mx-auto w-full max-w-md px-5 py-6 space-y-6">
       <!-- Top notice (quick account text + misc) -->
-      <div class="rounded-2xl border border-[#eee] bg-white/90 backdrop-blur p-4">
+      <div class="rounded-xl border border-[#eee] bg-white/90 backdrop-blur p-4">
         <!-- <div v-if="noticeAccounts?.length" class="space-y-1">
           <p v-for="(t,i) in noticeAccounts" :key="i" class="text-[12px] text-[#5e554f]">{{ t }}</p>
         </div> -->
