@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/vite.svg"
-		/>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>모든 날, 모든 순간 행복하게 살겠습니다.</title>
-		<link
-			rel="stylesheet"
-			href="/node_modules/sakura-js/sakura.min.css"
-		/>
-	</head>
-	<body>
-		<div id="app"></div>
-		<script
-			type="module"
-			src="/src/main.js"
-		></script>
-		<script src="/node_modules/sakura-js/sakura.min.js"></script>
-		<script>
-			var sakura = new Sakura('body')
-		</script>
-	</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- 모바일 레이아웃 & 인앱/키보드 안전영역 대응 -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+
+    <!-- 주소창/브라우저 테마 컬러 -->
+    <meta name="theme-color" content="#f6efe2" />
+    <!-- iOS PWA 상태바 (PWA 사용 시 적용) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>모든 날, 모든 순간 행복하게 살겠습니다.</title>
+
+    <!-- OG 미리보기 (카카오톡/메신저 공유 카드) -->
+    <meta property="og:title" content="승현 ♥ 정민 모바일 청첩장" />
+    <meta property="og:description" content="2025.10.25(토) 오후 1시 · 더퍼스트클래스파티 강서NH서울타워점" />
+    <!-- 배포 시 실제 URL로 교체 -->
+    <meta property="og:image" content="https://your-domain.com/og-cover.jpg" />
+    <meta property="og:url" content="https://your-domain.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- 파비콘(원하면 교체) -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- 사쿠라 효과: CDN 사용 (Netlify에서도 동작) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura-js/dist/sakura.min.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Vite entry -->
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- 사쿠라 효과 -->
+    <script src="https://cdn.jsdelivr.net/npm/sakura-js/dist/sakura.min.js"></script>
+    <script>
+      // 필요 없으면 이 두 줄 지워도 됩니다.
+      var sakura = new Sakura('body');
+    </script>
+
+    <!-- PWA로 완전 풀스크린 원하면 아래 주석 해제하고 파일 추가
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    -->
+  </body>
 </html>
