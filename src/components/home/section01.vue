@@ -6,7 +6,7 @@
 
     <div class="relative min-h-screen mx-auto w-full px-5 py-5 flex flex-col">
       <!-- photo area -->
-      <div class="relative h-[calc(100vh-10rem)] rounded-[18px] overflow-hidden bg-[#e9e4e1]">
+      <div class="relative h-[calc(100vh-10rem)] rounded-t-[18px] overflow-hidden bg-[#e9e4e1]">
         <img
           :src="imageSrc"
           alt="wedding"
@@ -34,8 +34,8 @@
         </div>
         
         <!-- bottom gradient effect (original) -->
-        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-28
-                    bg-gradient-to-t from-[#f8f6f4] via-[#f8f6f4]/60 to-transparent"/>
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32
+                    bg-gradient-to-t from-white via-white/90 via-white/40 to-transparent"/>
       </div>
 
       <!-- middle script text (below image) -->
