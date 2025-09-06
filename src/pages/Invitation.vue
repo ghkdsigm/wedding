@@ -122,7 +122,7 @@
       <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(50%_50%_at_100%_0%,#f3e0d7_0%,transparent_55%)]"></div>
       <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
         <h2 class="text-center text-2xl sm:text-3xl font-semibold mb-8">자주 묻는 질문</h2>
-        <div class="divide-y divide-[#ead9cf] rounded-2xl bg-white/70 backdrop-blur border border-[#ead9cf]">
+        <div class="divide-y divide-[#ead9cf] rounded-lg bg-white/70 backdrop-blur border border-[#ead9cf]">
           <details v-for="(f, i) in faq" :key="i" class="group p-5">
             <summary class="flex cursor-pointer list-none items-center justify-between">
               <span class="font-medium">{{ f.q }}</span>
@@ -201,7 +201,7 @@ const CardItem = defineComponent({
   props: { title: { type: String, default: '' }, badge: { type: String, default: '' } },
   setup(props) {
     return () => h('div', { class: 'group rounded-3xl border border-[#ead9cf] bg-white/70 backdrop-blur p-3 hover:shadow-md transition' }, [
-      h('div', { class: 'relative rounded-2xl overflow-hidden aspect-[9/16] bg-[#e9e0da] flex items-center justify-center' }, [
+      h('div', { class: 'relative rounded-lg overflow-hidden aspect-[9/16] bg-[#e9e0da] flex items-center justify-center' }, [
         h('div', { class: 'absolute inset-0 mask-arch bg-gradient-to-b from-[#e6ddd7] to-[#dccfc6]' }),
         h('span', { class: 'text-[#a8988e] text-[11px]' }, 'PHOTO AREA')
       ]),
@@ -217,7 +217,7 @@ const StepCard = defineComponent({
   name: 'StepCard',
   props: { index: { type: Number, required: true }, title: { type: String, default: '' }, desc: { type: String, default: '' } },
   setup(props) {
-    return () => h('li', { class: 'rounded-2xl border border-[#ead9cf] bg-white/70 backdrop-blur p-5' }, [
+    return () => h('li', { class: 'rounded-lg border border-[#ead9cf] bg-white/70 backdrop-blur p-5' }, [
       h('div', { class: 'w-9 h-9 rounded-full bg-[#6b5a4d] text-white flex items-center justify-center text-xs mb-3' }, String(props.index).padStart(2, '0')),
       h('p', { class: 'font-medium' }, props.title),
       h('p', { class: 'text-sm text-[#7b6a5d] mt-2 leading-6' }, props.desc),
@@ -231,7 +231,7 @@ const PhotoCard = defineComponent({
   setup(props, { attrs }) {
     const shape = props.rounded === 'full' ? 'rounded-full' : 'rounded-3xl'
     return () => h('div', { class: `${shape} border border-[#ead9cf] bg-white/70 p-3 ${attrs.class || ''}` }, [
-      h('div', { class: 'w-full h-full rounded-2xl overflow-hidden bg-[#e9e0da] relative' }, [
+      h('div', { class: 'w-full h-full rounded-lg overflow-hidden bg-[#e9e0da] relative' }, [
         h('div', { class: 'absolute inset-0 mask-arch bg-gradient-to-b from-[#e6ddd7] to-[#dccfc6]' }),
         h('div', { class: 'absolute inset-0 flex items-center justify-center' }, [h('span', { class: 'text-[#a8988e] text-[11px]' }, 'PHOTO AREA')])
       ])

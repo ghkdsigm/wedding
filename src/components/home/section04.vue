@@ -132,10 +132,5 @@ function submitDummy() {
 </script>
 
 <style scoped>
-.fade-enter-active,.fade-leave-active{ transition:opacity .2s ease }
-.fade-enter-from,.fade-leave-to{ opacity:0 }
 
-.nav-pill{ @apply rounded-2xl border border-[#eee] bg-white/90 backdrop-blur p-2 flex flex-col items-center gap-1; }
-.nav-ico{ @apply w-10 h-10 rounded-full text-white grid place-items-center text-sm font-semibold shadow; }
-.nav-txt{ @apply text-[11px] text-[#6c625b]; }
 </style>
