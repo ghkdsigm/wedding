@@ -41,5 +41,9 @@ const router = useRouter()
 
 const goToHome = () => {
 	router.push('/home')
+	// 페이지 이동 후 스크롤을 맨 위로
+	setTimeout(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}, 100)
 }
 </script>
