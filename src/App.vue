@@ -11,7 +11,7 @@
 
 		<!-- <Header /> -->
 		<router-view />
-		<FallingPetals />
+		<!-- <FallingPetals /> -->
 	</div>
 </template>
 

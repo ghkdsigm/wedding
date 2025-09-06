@@ -1,0 +1,173 @@
+<template>
+  <div class="home-page">
+    <Section01
+      :image-src="weddingData.imageSrc"
+      :bridegroom="weddingData.bridegroom"
+      :bride="weddingData.bride"
+      :script-text="weddingData.scriptText"
+      :date-text="weddingData.dateText"
+      :venue-text="weddingData.venueText"
+      :script-font-class="weddingData.scriptFontClass"
+      :wedding-date="weddingData.weddingDate"
+    />
+    <Section02
+      :body-text="weddingData.bodyText"
+      :user-type="weddingData.userType"
+      :groom-family="weddingData.groomFamily"
+      :bride-family="weddingData.brideFamily"
+    />
+    <Section05
+      :year="weddingData.year"
+      :month="weddingData.month"
+      :selected-day="weddingData.selectedDay"
+    />    
+   
+    
+    <Section03
+      kakao-key="eb26875e991edf730a64a0e46c840780"
+      venue-name="더퍼스트클래스파티 강서NH서울타워점"
+      address="서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티"
+      tel="02-2013-5670"
+      :level="3"
+      subway-info="증미역 3번 출구에서 56m NH서울타워 20층 도보 1분"
+      bus-info="간선:  지선: 마을: "
+      parking-info="강서NH서울타워점 주차장 이용"
+    />
+
+    <Section04
+      :notice-accounts="weddingData.noticeAccounts"
+      :extra-notice="weddingData.extraNotice"
+      :section-title="weddingData.sectionTitle"
+      :section-subtitle="weddingData.sectionSubtitle"
+      :groom-label="weddingData.groomLabel"
+      :bride-label="weddingData.brideLabel"
+      :groom-accounts="weddingData.groomAccounts"
+      :bride-accounts="weddingData.brideAccounts"
+    />
+
+    <!-- <Section06
+      :images="weddingData.galleryImages"
+    /> -->
+
+  </div>
+</template>
+
+<script setup>
+import Section01 from '@/components/home/section01.vue'
+import Section02 from '@/components/home/section02.vue'
+import Section03 from '@/components/home/section03.vue'
+import Section04 from '@/components/home/section04.vue'
+import Section05 from '@/components/home/section05.vue'
+import Section06 from '@/components/home/section06.vue'
+
+// 부모에서 모든 웨딩 데이터 관리
+const weddingData = {
+  // Section01 데이터
+  imageSrc: '/src/assets/imgs/wedding.jpg',
+  bridegroom: '황승현',
+  bride: '김정민',
+  scriptText: 'Together with Cheongsu',
+  dateText: '2025년 10월 25일 토요일 오후 1시',
+  venueText: '더퍼스트클래스파티 강서NH서울타워점',
+  scriptFontClass: '',
+  weddingDate: import.meta.env.VITE_WEDDING_DATE || '2025-10-25', // D-Day 계산용 (YYYY-MM-DD 형식)
+  
+  // Section02 데이터
+  bodyText: {
+    guest: `안녕하세요.
+신랑 황승현, 신부 김정민의 결혼식에
+귀한 걸음 하여 자리를 빛내 주시면 깊이 감사하겠습니다.
+
+소중한 인연으로 만난 황승현과 김정민이 이제 서로의 든든한
+동반자가 되어 서로를 존중하고 함께 사랑하고자 합니다.
+
+저희는 양가 가족과 지장 가까운 분들을 모신,
+두 사람의 진심과 사랑의 약속이 담금질되는 작은 예식을
+올리게 되었습니다.
+
+함께해 주시는 분들의 따뜻한 마음으로 배려를 양해하며,
+따뜻한 마음으로 축복해 주시면 더없는 기쁨이겠습니다.
+소중한 마음으로 축복해 주시는 만큼 행복하게 잘 살겠습니다.`,
+    nonGuest: `안녕하세요?
+신랑 황승현과 신부 김정민이 멋진 가약을 맺고
+서로의 가정을 꾸리게 되었습니다.
+
+장소의 여건을 감안, 모든 분들을 모시지 못함을 양해
+바랍니다. 자리는 [수용 인원/주최 측 방침]에 따라
+양가 직계 가족 분과 [가까운/소수의] 지인 중심의 예식으로
+올리고자 합니다.
+
+바쁘신 가운데 [많은 분을 정성껏 모시지 못하는 점] 너그러이
+양해 해 주세요.
+정작 찾아뵙고 결혼 소식을 전해드리지 못해
+송구스러운 마음입니다.
+
+멀리서나마 저희 두 사람의 앞날을 마음으로 축복해 주시면
+더할 나위 없는 기쁨으로 예쁘게 살아가겠습니다.
+늘 건강하시고 가정에 행복이 가득하시길 바랍니다.`
+  },
+  groomFamily: '황운의 장남 황승현',
+  brideFamily: '권숙희의 장녀 김정민',
+  userType: 'guest', // 'guest' 또는 'nonGuest'
+  
+  // Section03 데이터
+  kakaoKey: import.meta.env.VITE_KAKAO_MAP_KEY || 'eb26875e991edf730a64a0e46c840780',
+  venueName: import.meta.env.VITE_VENUE_NAME || '더퍼스트클래스파티 강서NH서울타워점',
+  address: import.meta.env.VITE_VENUE_ADDRESS || '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
+  tel: import.meta.env.VITE_VENUE_TEL || '02-2013-5670',
+  lat: parseFloat(import.meta.env.VITE_VENUE_LAT) || 37.514542,
+  lng: parseFloat(import.meta.env.VITE_VENUE_LNG) || 127.031708,
+  level: parseInt(import.meta.env.VITE_VENUE_LEVEL) || 3,
+  subwayInfo: import.meta.env.VITE_SUBWAY_INFO || '증미역 3번 출구에서 56m NH서울타워 20층 도보 1분',
+  busInfo: import.meta.env.VITE_BUS_INFO || '간선: 47, 240, 463\n지선: 4211\n마을: 강남08',
+  parkingInfo: import.meta.env.VITE_PARKING_INFO || '강서NH서울타워점 주차장 이용',
+  
+  // Section04 데이터
+  noticeAccounts: import.meta.env.VITE_NOTICE_ACCOUNTS ? [import.meta.env.VITE_NOTICE_ACCOUNTS] : [
+    '농협 123-456788-7654321 예금주: 이지훈'
+  ],
+  extraNotice: import.meta.env.VITE_EXTRA_NOTICE || '화환은 정중히 사양합니다.',
+  sectionTitle: '마음 전하실 곳',
+  sectionSubtitle: '마음을 전해주실 분들을 위해 계좌번호를 안내해드립니다.',
+  groomLabel: '신랑측',
+  brideLabel: '신부측',
+  groomAccounts: import.meta.env.VITE_GROOM_ACCOUNTS ? 
+    import.meta.env.VITE_GROOM_ACCOUNTS.split(',').map(acc => {
+      const [bank, number, holder] = acc.trim().split(' ')
+      return { bank, number, holder }
+    }) : [
+      { bank: '신한', number: '110-377-929023', holder: '황승현' },
+      { bank: '토스', number: '1000-1234-5678', holder: '황운' }
+    ],
+  brideAccounts: import.meta.env.VITE_BRIDE_ACCOUNTS ? 
+    import.meta.env.VITE_BRIDE_ACCOUNTS.split(',').map(acc => {
+      const [bank, number, holder] = acc.trim().split(' ')
+      return { bank, number, holder }
+    }) : [
+      { bank: '신한', number: '444-55-666666', holder: '김정민' },    
+      { bank: '신한', number: '444-55-666666', holder: '권숙희' }
+    ],
+    
+  // Section05 데이터
+  year: 2025,
+  month: 10,
+  selectedDay: 25,
+  
+  // Section06 데이터 (갤러리 이미지)
+  galleryImages: [
+    'https://www.iwedding.co.kr/center/iweddingb/product/800_17588_1730685980_90793400_3232256098.jpg',
+    'https://www.iwedding.co.kr/center/iweddingb/product/800_11243_1716875969_31838900_3232256100.jpg',
+    'https://www.iwedding.co.kr/center/iweddingb/product/800_12710_1716273463_83445300_3232256100.jpg',
+    'https://www.iwedding.co.kr/center/iweddingb/product/800_14165_1711688929_18023400_3232256098.jpg',
+    'https://www.iwedding.co.kr/center/iweddingb/product/800_11806_1736932570_03864000_3232256098.jpg',
+    'https://cdn.imweb.me/upload/S201811245bf8fd46464e7/4eb0cd6ed2285.jpg',
+  ]
+}
+</script>
+
+<style scoped>
+.home-page {
+  width: 100%;
+  height: 100vh;
+}
+</style>
