@@ -56,8 +56,8 @@
 
     <!-- Modal for accounts -->
     <transition name="fade">
-      <div v-if="showModal" class="fixed inset-0 z-50 bg-black/40 grid place-items-end">
-        <div class="w-full max-w-md mx-auto bg-white rounded-t-3xl p-5 pb-6">
+      <div v-if="showModal" class="fixed inset-0 z-50 bg-black/40 grid place-items-end" @click="closeModal">
+        <div class="w-full max-w-md mx-auto bg-white rounded-t-3xl p-5 pb-6" @click.stop>
           <div class="flex items-center justify-between">
             <h4 class="text-[clamp(12px,3.75vw,18px)] font-medium">{{ modalTitle }}</h4>
             <button class="text-[clamp(10px,3.25vw,16px)] text-[#6c625b]" @click="closeModal">닫기</button>
