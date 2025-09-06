@@ -3,16 +3,20 @@
   <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden">
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
-    <div class="relative mx-auto w-full max-w-md px-5 py-6 flex flex-col justify-center items-center">
+    <div class="relative mx-auto w-full max-w-md px-0 py-6 flex flex-col justify-center items-center">
       <!-- Share Button -->
       <div class="w-full max-w-sm flex justify-center">
         <button
           @click="share"
-          class="w-[auto] px-12 bg-[#6b5a4d] text-white rounded-full py-3 flex items-center justify-center gap-3  hover:bg-[#5a4a3d] active:scale-95 transition-all duration-200"
+          class="w-[auto] px-5 border border-gray-300 text-gray-500 rounded-full py-2 flex items-center justify-center gap-3 hover:border-gray-400 hover:text-gray-600 active:scale-95 transition-all duration-200"
         >
-          <!-- 카카오톡 이모티콘 -->
-          <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-            <span class="text-lg">💬</span>
+          <!-- 카카오톡 아이콘 -->
+          <div class="w-8 h-8 flex items-center justify-center">
+            <img 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZHEBapCSKx2cjml_d5T6wvFaEczwtye9yZyIOjN5sqSZ9DTZIs7BS4pR27V2vw_zObao&usqp=CAU" 
+              alt="카카오톡" 
+              class="w-6 h-6"
+            />
           </div>
           
           <!-- 텍스트 -->
