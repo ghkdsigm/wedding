@@ -14,13 +14,18 @@ const defaultWithoutAccountUrl = 'https://adorable-faun-527e08.netlify.app/home4
 
 const galleryUrl = 'https://adorable-faun-527e08.netlify.app/wedding'
 
+const place = {
+  guest: '더퍼스트클래스파티 강서NH서울타워점',
+  nonGuest: '스몰웨딩',
+}
+
 </script>
 
 <template>
   <KakaoShareButton
     :kakao-key="KAKAO"
-    title="승현 ♥ 정민 저희 결혼합니다"
-    description="2025.10.25(토) 오전 11시30분 · 더퍼스트클래스파티 강서NH서울타워점"
+    title="승현 ♥ 정민, 저희 결혼합니다!"
+    :description="`2025.10.25(토) 오전 11시30분 · ${place.guest}`"
     image-url="https://adorable-faun-527e08.netlify.app/imgs/wedding.jpg"
     :dad-attending-url="dadAttendingUrl"
     :dad-not-attending-url="dadNotAttendingUrl"
