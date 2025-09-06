@@ -65,7 +65,8 @@ import Section06 from '@/components/home/section06.vue'
 // 부모에서 모든 웨딩 데이터 관리
 const weddingData = {
   // Section01 데이터
-  imageSrc: '/src/assets/imgs/wedding.jpg',
+  // imageSrc: '/src/assets/imgs/wedding.jpg',
+  imageSrc: '/imgs/wedding.jpg',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'Together with Cheongsu',

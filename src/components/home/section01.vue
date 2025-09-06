@@ -8,7 +8,7 @@
       <!-- photo area -->
       <div class="relative h-[calc(100vh-10rem)] rounded-[18px] overflow-hidden bg-[#e9e4e1]">
         <img
-          :src="imageSrc || '/src/assets/imgs/wedding.jpg'"
+          :src="imageSrc"
           alt="wedding"
           class="h-full w-auto object-cover object-center"
         />
