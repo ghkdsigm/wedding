@@ -97,7 +97,7 @@
     
     // 기본 버튼: 모바일 청첩장 보기
     const buttons = [
-      { title: '모바일 청첩장 보기', link: { mobileWebUrl: targetUrl, webUrl: targetUrl } },
+      { title: '청첩장 보기', link: { mobileWebUrl: targetUrl, webUrl: targetUrl } },
     ]
   
     // 갤러리 버튼: galleryUrl이 있으면 두 번째 버튼으로 추가
