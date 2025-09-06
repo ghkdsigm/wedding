@@ -10,7 +10,7 @@ const route = useRoute()
 // )
 
 const currentUrl = 'https://adorable-faun-527e08.netlify.app/home'
-
+const galleryUrl = 'https://adorable-faun-527e08.netlify.app/wedding'
 
 </script>
 
@@ -21,6 +21,7 @@ const currentUrl = 'https://adorable-faun-527e08.netlify.app/home'
     description="2025.10.25(토) 오전 11시30분 · 더퍼스트클래스파티 강서NH서울타워점"
     image-url="https://adorable-faun-527e08.netlify.app/imgs/wedding.jpg"
     :web-url="currentUrl"
+    :gallery-url="galleryUrl"
     :lat="37.557129"
     :lng="126.862107"
     place-name="더퍼스트클래스파티 강서NH서울타워점"
