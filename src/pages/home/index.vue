@@ -70,7 +70,7 @@ const weddingData = {
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'Together with Cheongsu',
-  dateText: '2025년 10월 25일 토요일 오후 1시',
+  dateText: '2025년 10월 25일 토요일 오전 11시30분',
   venueText: '더퍼스트클래스파티 강서NH서울타워점',
   scriptFontClass: '',
   weddingDate: '2025-10-25', // D-Day 계산용 (YYYY-MM-DD 형식)
