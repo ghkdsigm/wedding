@@ -24,14 +24,16 @@
    
     
     <Section03
-      kakao-key="eb26875e991edf730a64a0e46c840780"
-      venue-name="더퍼스트클래스파티 강서NH서울타워점"
-      address="서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티"
-      tel="02-2013-5670"
-      :level="3"
-      subway-info="증미역 3번 출구에서 56m NH서울타워 20층 도보 1분"
-      bus-info="간선:  지선: 마을: "
-      parking-info="강서NH서울타워점 주차장 이용"
+      :kakao-key="weddingData.kakaoKey"
+      :venue-name="weddingData.venueName"
+      :address="weddingData.address"
+      :tel="weddingData.tel"
+      :lat="weddingData.lat"
+      :lng="weddingData.lng"
+      :level="weddingData.level"
+      :subway-info="weddingData.subwayInfo"
+      :bus-info="weddingData.busInfo"
+      :parking-info="weddingData.parkingInfo"
     />
 
     <Section04
@@ -111,7 +113,7 @@ const weddingData = {
   userType: 'guest', // 'guest' 또는 'nonGuest'
   
   // Section03 데이터
-  kakaoKey: import.meta.env.VITE_KAKAO_MAP_KEY,
+  kakaoKey: import.meta.env.VITE_KAKAO_MAP_KEY || 'your_kakao_map_key_here',
   venueName: import.meta.env.VITE_VENUE_NAME || '더퍼스트클래스파티 강서NH서울타워점',
   address: import.meta.env.VITE_VENUE_ADDRESS || '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
   tel: import.meta.env.VITE_VENUE_TEL || '02-2013-5670',
