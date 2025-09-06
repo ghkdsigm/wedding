@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* Pretendard 폰트 설정 */
+/* 고운바탕 폰트를 기본으로 설정 */
 body {
-	font-family: 'Pretendard', ui-sans-serif, system-ui;
+	font-family: 'GounBatang', serif;
 	user-select: none;
 	touch-action: pan-y;
 	text-rendering: optimizeLegibility; /* 글꼴 렌더링 최적화 */
@@ -76,6 +76,31 @@ body {
 		url('/src/assets/fonts/KyoboHandwriting2020pdy.ttf') format('truetype');
 	font-style: normal;
 	font-display: block;
+}
+
+@font-face {
+    font-family: 'GounBatang';
+    src: url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Regular.woff2') format('woff2'),
+         url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GounBatang';
+    src: url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Bold.woff2') format('woff2'),
+         url('https://fonts.gstatic.com/ea/gowunbatang/v1/GowunBatang-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* Tailwind 클래스 직접 정의 */
+.font-goun-batang {
+    font-family: 'GounBatang', serif;
+}
+
+.font-goun {
+    font-family: 'GounBatang', serif;
 }
 
 /* button {

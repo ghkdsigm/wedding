@@ -1,5 +1,5 @@
 <template>
-	<div id="app-shell" class="app-shell font-sans text-gray-800">
+	<div id="app-shell" class="app-shell font-goun-batang text-gray-800">
 	  <!-- 필요 시 헤더/푸터 다시 열면 됨 -->
 	  <!-- <Header /> -->
 	  <router-view />
