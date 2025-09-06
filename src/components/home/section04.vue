@@ -1,7 +1,7 @@
 <template>
   <!-- Gift / Account Section (unified layout) -->
-  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
+  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden  py-12">
+    <div class="absolute inset-0 pointer-events-none"/>
 
     <div class="relative mx-auto w-full max-w-md px-5 py-6 space-y-6">
       <!-- Top notice (quick account text + misc) -->
@@ -23,7 +23,7 @@
       <p class="text-center text-[clamp(10px,3vw,14px)] text-[#9b948e] -mt-3">{{ sectionSubtitle }}</p>
 
       <!-- Buttons: groom / bride -->
-      <div class="space-y-4">
+      <div class="space-y-6">
         <div class="flex items-center justify-between gap-3">
           <span class="text-[clamp(12px,3.5vw,16px)]">{{ groomLabel }}</span>
           <button class="px-4 py-2 rounded-full text-white text-[clamp(10px,3vw,14px)] shadow bg-[#97c2a9] hover:opacity-90" @click="openModal('groom')">

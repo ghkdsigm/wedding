@@ -1,6 +1,6 @@
 <template>
   <!-- Kakao Map Section (unified layout) -->
-  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden">
+  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden pt-12">
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
     <div class="relative mx-auto w-full max-w-md px-5 py-5 space-y-4">
