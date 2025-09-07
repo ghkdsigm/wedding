@@ -4,7 +4,7 @@
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
     <div class="relative mx-auto w-full px-0 py-6 bg-[#eef5ee] ">
-      <div class="overflow-hidden p-6">
+      <div class="overflow-hidden p-6 max-w-xl mx-auto">
         <!-- Header -->
         <div class="py-4 text-center font-bold">
           <p class="text-[clamp(16px,5.5vw,28px)]">2025.{{ month }}</p>
