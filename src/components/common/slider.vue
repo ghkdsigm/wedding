@@ -12,24 +12,37 @@
 			<SwiperSlide
 				v-for="(img, i) in images"
 				:key="i"
+				class="relative"
 			>
-				<img
-					:src="img"
-					class="w-full h-full object-cover"
-					alt="메인 이미지"
-				/>
+				<!-- 배경 블러 이미지 -->
+				<div 
+					class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+					:style="{ backgroundImage: `url(${img})` }"
+					style="filter: blur(8px); transform: scale(1.1);"
+				></div>
 				
-			<!-- 필기체 오버레이 텍스트 -->
-			<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-				<div class="text-center">
-					<h1 class="handwriting-text text-5xl sm:text-8xl text-orange-400">
-						{{ handwritingTexts[i] }}
-					</h1>
-					<h2 class="subtitle-text text-6xl sm:text-4xl text-white mt-4">
-						{{ subtitleTexts[i] }}
-					</h2>
+				<!-- 중앙 선명한 이미지 영역 -->
+				<div class="relative z-10 w-full h-full flex items-center justify-center p-5">
+					<div class="w-full h-full max-w-4xl max-h-[80vh] rounded-lg overflow-hidden shadow-2xl">
+						<img
+							:src="img"
+							class="w-full h-full object-cover"
+							alt="메인 이미지"
+						/>
+					</div>
 				</div>
-			</div>
+				
+				<!-- 필기체 오버레이 텍스트 -->
+				<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+					<div class="text-center">
+						<h1 class="handwriting-text text-5xl sm:text-8xl text-orange-400">
+							{{ handwritingTexts[i] }}
+						</h1>
+						<h2 class="subtitle-text text-6xl sm:text-4xl text-white mt-4">
+							{{ subtitleTexts[i] }}
+						</h2>
+					</div>
+				</div>
 			</SwiperSlide>
 		</Swiper>
 
