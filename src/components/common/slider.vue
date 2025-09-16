@@ -33,7 +33,7 @@
 				</div>
 				
 				<!-- 필기체 오버레이 텍스트 -->
-				<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+				<!-- <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
 					<div class="text-center">
 						<h1 class="handwriting-text text-5xl sm:text-8xl text-orange-400">
 							{{ handwritingTexts[i] }}
@@ -42,33 +42,35 @@
 							{{ subtitleTexts[i] }}
 						</h2>
 					</div>
-				</div>
+				</div> -->
 			</SwiperSlide>
 		</Swiper>
 
 		<!-- 썸네일 Swiper -->
-		<div class="absolute bottom-[7vh] left-1/2 -translate-x-1/2 z-10 w-[90%] max-w-md">
+		<div class="absolute bottom-[7vh] left-1/2 -translate-x-1/2 z-10 w-[320px]">
 			<Swiper
 				@swiper="setThumbsSwiper"
 				:modules="[Thumbs]"
-				:spaceBetween="12"
-				:slidesPerView="3"
+				:spaceBetween="1"
+				:slidesPerView="5"
 				:centeredSlides="true"
 			>
 				<SwiperSlide
 					v-for="(img, i) in images"
 					:key="i"
-					class="cursor-pointer overflow-hidden rounded border-2 transition duration-300"
+					class="cursor-pointer transition duration-300 w-[40px] h-[40px] mx-auto flex items-center justify-center"
 					:class="{
-						'border-transparent opacity-100': i === activeThumbIndex,
-						'border-transparent opacity-50': i !== activeThumbIndex,
+						'opacity-100 scale-110 w-[60px] h-[60px]': i === activeThumbIndex,
+						'opacity-60': i !== activeThumbIndex,
 					}"
 				>
-					<img
-						:src="img"
-						class="w-full h-[15vh] object-cover"
-						alt="썸네일"
-					/>
+					<div class="w-[40px] h-[40px] overflow-hidden rounded-full">
+						<img
+							:src="img"
+							class="w-full h-full object-cover"
+							alt="썸네일"
+						/>
+					</div>
 				</SwiperSlide>
 			</Swiper>
 		</div>
