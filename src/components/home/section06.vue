@@ -34,13 +34,13 @@
         </div>
 
         <!-- Thumbnail Swiper - 아래로 이동 -->
-        <div class="px-4 py-4">
+        <div class="py-4">
           <Swiper
             @swiper="setThumbsSwiper"
             :modules="[Thumbs]"
             :spaceBetween="8"
             :slidesPerView="4"
-            :centeredSlides="true"
+            :centeredSlides="false"
           >
             <SwiperSlide
               v-for="(img, i) in images"
@@ -59,8 +59,9 @@
             </SwiperSlide>
           </Swiper>
         </div>
+        </div>
+        <p class="text-center text-sm text-gray-600 py-2 font-bold">이미지를 클릭하시면 확대보기가 가능합니다.</p>
       </div>
-    </div>
 
     <!-- 팝업 모달 -->
     <div
@@ -179,7 +180,7 @@ const onPopupSlideChange = swiper => {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* 팝업 모달 스타일 */
