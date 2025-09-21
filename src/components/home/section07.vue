@@ -37,7 +37,7 @@
           </div>
           
           <!-- 텍스트 -->
-          <span class="font-medium text-sm">갤러리 구경</span>
+          <span class="font-medium text-sm">갤러리 보기</span>
         </button>
       </div>
     </div>
