@@ -81,8 +81,8 @@ import Section07 from '@/components/home/section07.vue'
 const weddingData = {
   // Section01 데이터
   // imageSrc: '/src/assets/imgs/wedding.jpg',
-  tit: 'The WEDDING',
-  imageSrc: '/imgs/common/10-min.jpg',
+  tit: 'THE BEGINNING',
+  imageSrc: '/imgs/common/representative.png',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'The Start of Our Journey',
@@ -177,7 +177,7 @@ const weddingData = {
   // Section07 데이터 (공유)
   shareTitle: '승현 ♥ 정민, 저희 결혼합니다!',
   shareDescription: '',
-  shareImageUrl: 'https://hshkjm251025.shop/imgs/common/1-min.jpg',
+  shareImageUrl: 'https://hshkjm251025.shop/imgs/common/thumb.png',
   shareWebUrl: 'https://hshkjm251025.shop/announcement'
 }
 </script>

@@ -79,8 +79,8 @@ import Section07 from '@/components/home/section07.vue'
 const weddingData = {
   // Section01 데이터
   // imageSrc: '/src/assets/imgs/wedding.jpg',
-  tit: 'WEDDING Invitation',
-  imageSrc: '/imgs/common/10-min.jpg',
+  tit: 'WEDDING INVITATION',
+  imageSrc: '/imgs/common/representative.png',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'The Start of Our Journey',
@@ -177,7 +177,7 @@ const weddingData = {
   // Section07 데이터 (공유)
   shareTitle: '승현 ♥ 정민, 저희 결혼합니다!',
   shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
-  shareImageUrl: 'https://hshkjm251025.shop/imgs/common/1-min.jpg',
+  shareImageUrl: 'https://hshkjm251025.shop/imgs/common/thumb.png',
   shareWebUrl: 'https://hshkjm251025.shop/home'
 }
 </script>
