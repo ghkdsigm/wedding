@@ -16,18 +16,18 @@
         />
         
         <!-- top captions floating on image -->
-        <div class="absolute top-0 left-0 right-0 p-6">
+        <div class="absolute top-20 left-0 right-0 p-6">
           <div class="text-center">
             <!-- 폰트 테스트 -->
             <!-- <p class="text-xs text-white/50 mb-2 font-goun-batang">폰트 테스트: 고운바탕</p> -->
-            <p class="text-xs tracking-[0.35em] text-white/80 ">{{ title }}</p>
-            <p class="mt-1 text-sm tracking-wide text-white font-medium font-goun-batang">
+            <p class="text-[10px] tracking-[0] text-white/80 ">{{ title }}</p>
+            <p class="mt-1 text-base tracking-wide text-white font-medium font-goun-batang">
               {{ bridegroom }} <span class="text-white/70 text-[clamp(10px,3vw,14px)]">and</span> {{ bride }}
             </p>
             <!-- D-Day 표시 -->
-            <div class="mt-4">
-              <div class="inline-block  backdrop-blur-sm rounded-full px-4 py-1">
-                <p class="text-sm text-white font-medium">
+            <div class="mt-2">
+              <div class="inline-block rounded-full px-4 py-1" style="background: #FFFFFF4D;">
+                <p class="text-[10px] text-white font-medium">
                   {{ dDayText }}
                 </p>
               </div>
