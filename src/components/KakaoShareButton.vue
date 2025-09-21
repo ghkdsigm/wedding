@@ -6,7 +6,7 @@
         class="px-4 py-2 rounded-full bg-[#6b5a4d] text-white text-sm shadow"
         @click="share('dad-attending')"
       >
-        카카오톡 공유하기(아빠 - 올사람용)
+        카카오톡 공유하기(아빠 - 모시는분들 전용)
       </button>
 
       <!-- 아빠 - 못오는사람용 -->
@@ -14,7 +14,7 @@
         class="px-4 py-2 rounded-full bg-[#6b5a4d] text-white text-sm shadow"
         @click="share('dad-not-attending')"
       >
-        카카오톡 공유하기(아빠 - 못오는사람용)
+        카카오톡 공유하기(아빠 - 못 오시는분들 전용용)
       </button>
 
       <!-- 기본 - 계좌정보있는용 -->
@@ -22,16 +22,16 @@
         class="px-4 py-2 rounded-full bg-[#6b5a4d] text-white text-sm shadow"
         @click="share('default-with-account')"
       >
-        카카오톡 공유하기(기본 - 계좌정보있는용)
+        승현 정민용
       </button>
 
       <!-- 기본 - 계좌정보없는용 -->
-      <button
+      <!-- <button
         class="px-4 py-2 rounded-full bg-[#6b5a4d] text-white text-sm shadow"
         @click="share('default-without-account')"
       >
         카카오톡 공유하기(기본 - 계좌정보없는용)
-      </button>
+      </button> -->
     </div>
   </template>
   
@@ -52,7 +52,7 @@ const getDescription = () => {
 const props = defineProps({
     kakaoKey: { type: String, required: true },
     title: { type: String, default: '승현 ♥ 정민, 저희 결혼합니다!' },
-    description: { type: String, default: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워' },
+    description: { type: String, default: '2025.10.25(토) 오전 11시30분' },
     imageUrl: { type: String, required: true }, // 절대경로
     
     // 각 버튼별 URL

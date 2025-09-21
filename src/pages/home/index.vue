@@ -157,7 +157,7 @@ const weddingData = {
 
   // Section07 데이터 (공유)
   shareTitle: '승현 ♥ 정민, 저희 결혼합니다!',
-  shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
+  shareDescription: '2025.10.25(토) 오전 11시30분',
   shareImageUrl: 'https://hshkjm251025.shop/imgs/common/thumb.png',
   shareWebUrl: 'https://hshkjm251025.shop/home'
 }
