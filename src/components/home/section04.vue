@@ -49,11 +49,11 @@
     </div>
 
      <!-- Top notice (quick account text + misc) -->
-     <div class="rounded-xl bg-white/90 backdrop-blur p-4">
+     <div class="rounded-xl bg-white/90 backdrop-blur p-4" v-if="extraNotice !== ''">
         <!-- <div v-if="noticeAccounts?.length" class="space-y-1">
           <p v-for="(t,i) in noticeAccounts" :key="i" class="text-[12px] text-[#5e554f]">{{ t }}</p>
         </div> -->
-        <p v-if="extraNotice" class="text-center text-[clamp(10px,3vw,14px)] text-[#9b948e]">{{ extraNotice }}</p>
+        <p class="text-center text-[clamp(10px,3vw,14px)] text-[#9b948e]">{{ extraNotice }}</p>
       </div>
 
     <!-- Modal for accounts -->
