@@ -69,7 +69,7 @@
       class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 popup-overlay"
       @click="closePopup"
     >
-      <div class="relative w-full h-full max-w-6xl max-h-[90vh] p-4">
+      <div class="relative w-full h-full max-w-6xl max-h-[90vh] p-4" @click.stop>
         <!-- 닫기 버튼 -->
         <button
           @click="closePopup"
