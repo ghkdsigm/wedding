@@ -7,10 +7,10 @@ const KAKAO = 'ae118806548ca1d60ddf5d35da105e7f'
 const route = useRoute()
 
 // 각 버튼별 임시 URL 설정
-const dadAttendingUrl = 'https://hshkjm251025.shop/home'
-const dadNotAttendingUrl = 'https://hshkjm251025.shop/home2'
-const defaultWithAccountUrl = 'https://hshkjm251025.shop/home3'
-const defaultWithoutAccountUrl = 'https://hshkjm251025.shop/home4'
+const dadAttendingUrl = 'https://hshkjm251025.shop/invitatation'
+const dadNotAttendingUrl = 'https://hshkjm251025.shop/announcement'
+const defaultWithAccountUrl = 'https://hshkjm251025.shop/home'
+const defaultWithoutAccountUrl = 'https://hshkjm251025.shop/home'
 
 const galleryUrl = 'https://hshkjm251025.shop/wedding'
 
@@ -26,7 +26,7 @@ const place = {
     :kakao-key="KAKAO"
     title="승현 ♥ 정민, 저희 결혼합니다!"
     :description="`2025.10.25(토) 오전 11시30분 · ${place.guest}`"
-    image-url="/imgs/common/1-min.jpg"
+    image-url="https://hshkjm251025.shop/imgs/common/1-min.jpg"
     :dad-attending-url="dadAttendingUrl"
     :dad-not-attending-url="dadNotAttendingUrl"
     :default-with-account-url="defaultWithAccountUrl"
