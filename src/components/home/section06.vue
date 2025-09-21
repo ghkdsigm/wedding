@@ -1,15 +1,11 @@
 <template>
   <!-- Gallery Section -->
-  <section class="relative min-h-[100svh] w-full bg-white text-[#3f3a37] overflow-hidden">
+  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden">
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
     <div class="relative mx-auto w-full py-6">
       <!-- Gallery Section -->
-      <div class="overflow-hidden bg-[#f6efe2] border border-[#e8ded0]">
-        <!-- Gallery Header -->
-        <div class="py-4 text-center font-bold">
-          <p class="text-[clamp(14px,4.5vw,22px)] text-[#8e877f]">우리의 순간들</p>
-        </div>
+      <div class="overflow-hidden bg-[#f6efe2]">
         <div class="h-px bg-[#e8ded0]"></div>
 
         <!-- Main Swiper -->
@@ -19,7 +15,7 @@
             :thumbs="{ swiper: thumbsSwiper }"
             :loop="true"
             :slidesPerView="1"
-            class="w-full h-[400px]"
+            class="w-full h-[800px]"
             @slideChange="onMainSlideChange"
           >
             <SwiperSlide

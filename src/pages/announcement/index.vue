@@ -159,13 +159,14 @@ const weddingData = {
   
   // Section06 데이터 (갤러리 이미지)
   galleryImages: [
-    'https://www.iwedding.co.kr/center/iweddingb/product/800_17588_1730685980_90793400_3232256098.jpg',
-    'https://www.iwedding.co.kr/center/iweddingb/product/800_11243_1716875969_31838900_3232256100.jpg',
-    'https://www.iwedding.co.kr/center/iweddingb/product/800_12710_1716273463_83445300_3232256100.jpg',
-    'https://www.iwedding.co.kr/center/iweddingb/product/800_14165_1711688929_18023400_3232256098.jpg',
-    'https://www.iwedding.co.kr/center/iweddingb/product/800_11806_1736932570_03864000_3232256098.jpg',
-    'https://cdn.imweb.me/upload/S201811245bf8fd46464e7/4eb0cd6ed2285.jpg',
+    '/imgs/common/1-min.jpg',
+    '/imgs/common/2-min.jpg',
+    '/imgs/common/3-min.jpg',
+    '/imgs/common/4-min.jpg',
+    '/imgs/common/5-min.jpg',
+    '/imgs/common/6-min.jpg',
   ],
+
 
   // Section07 데이터 (공유)
   shareTitle: '승현 ♥ 정민 모바일 청첩장',
