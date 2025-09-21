@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const props = defineProps({
 	buttonText: { type: String, default: '청첩장 보기' },
@@ -43,9 +43,16 @@ const props = defineProps({
 })
 
 const router = useRouter()
+const route = useRoute()
 
 const goToPage = () => {
-	router.push(props.buttonUrl)
+	// query 파라미터에서 이전 페이지 정보 가져오기
+	const fromPage = route.query.from
+	
+	// 이전 페이지 정보가 있으면 그 페이지로, 없으면 기본값 사용
+	let targetPath = fromPage || props.buttonUrl
+	
+	router.push(targetPath)
 	// 페이지 이동 후 스크롤을 맨 위로
 	setTimeout(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })

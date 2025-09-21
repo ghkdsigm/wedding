@@ -47,6 +47,10 @@
       :bride-accounts="weddingData.brideAccounts"
     />
 
+    <Section06
+      :images="weddingData.galleryImages"
+    />
+
     <Section07
       :kakao-key="weddingData.kakaoKey"
       :title="weddingData.shareTitle"

@@ -46,6 +46,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 // 부모로부터 받는 props
 const props = defineProps({
@@ -55,6 +56,9 @@ const props = defineProps({
   imageUrl: { type: String, required: true },
   webUrl: { type: String, required: true },
 })
+
+const router = useRouter()
+const route = useRoute()
 
 // 카카오 SDK 로드
 onMounted(async () => {
@@ -89,8 +93,11 @@ function share() {
 }
 
 function goToGallery() {
-  // 갤러리 페이지로 이동 (router 사용)
-  window.location.href = '/wedding'
+  // 현재 페이지 정보를 query 파라미터로 전달하여 갤러리 페이지로 이동
+  router.push({
+    path: '/wedding',
+    query: { from: route.path }
+  })
 }
 </script>
 

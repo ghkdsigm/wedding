@@ -11,7 +11,7 @@
 			>청첩장</router-link
 		>
 		<router-link
-			to="/gallery"
+			:to="{ path: '/wedding', query: { from: $route.path } }"
 			class="hover:text-pink-500"
 			>갤러리</router-link
 		>
