@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <Section01
+      :title="weddingData.tit"
       :image-src="weddingData.imageSrc"
       :bridegroom="weddingData.bridegroom"
       :bride="weddingData.bride"
