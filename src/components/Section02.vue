@@ -14,7 +14,7 @@
 			<!-- 앞으로의 여정 -->
 			<div class="mb-6">
 				<p class="text-gray-600 leading-relaxed text-sm">
-					저희의 앞날을 축복해 주시고 격려해 주세요<br />
+					저희의 앞날을 축복해 주시고 격려해 주세요.<br />
 					행복하게 잘 살겠습니다.
 				</p>
 			</div>

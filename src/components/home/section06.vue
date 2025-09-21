@@ -1,7 +1,7 @@
 <template>
   <!-- Gallery Section -->
   <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden px-6">
-    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
+    <div class="absolute inset-0 pointer-events-none"/>
 
     <div class="relative mx-auto w-full py-6">
       <!-- Gallery Section -->
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Thumbnail Swiper - 아래로 이동 -->
-        <div class="py-4">
+        <div class="py-2">
           <Swiper
             @swiper="setThumbsSwiper"
             :modules="[Thumbs]"

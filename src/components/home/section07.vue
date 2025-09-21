@@ -9,7 +9,7 @@
         <!-- 카카오톡 공유 버튼 (좌측) -->
         <button
           @click="share"
-          class="flex-1 px-4 border border-gray-300 text-gray-500 rounded-full py-2 flex items-center justify-center gap-2 hover:border-gray-400 hover:text-gray-600 active:scale-95 transition-all duration-200"
+          class="flex-1 px-4 border border-gray-300 text-gray-500 rounded-full py-2 flex items-center justify-center gap-1 hover:border-gray-400 hover:text-gray-600 active:scale-95 transition-all duration-200"
         >
           <!-- 카카오톡 아이콘 -->
           <div class="w-6 h-6 flex items-center justify-center">
@@ -27,7 +27,7 @@
         <!-- 갤러리 보러가기 버튼 (우측) -->
         <button
           @click="goToGallery"
-          class="flex-1 px-4 border border-gray-300 text-gray-500 rounded-full py-2 flex items-center justify-center gap-2 hover:border-gray-400 hover:text-gray-600 active:scale-95 transition-all duration-200"
+          class="flex-1 px-4 border border-gray-300 text-gray-500 rounded-full py-2 flex items-center justify-center gap-1 hover:border-gray-400 hover:text-gray-600 active:scale-95 transition-all duration-200"
         >
           <!-- 갤러리 아이콘 -->
           <div class="w-6 h-6 flex items-center justify-center">
@@ -37,7 +37,7 @@
           </div>
           
           <!-- 텍스트 -->
-          <span class="font-medium text-sm">갤러리 보기</span>
+          <span class="font-medium text-sm">사진 더보기</span>
         </button>
       </div>
     </div>
