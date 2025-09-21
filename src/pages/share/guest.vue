@@ -6,12 +6,19 @@ import KakaoShareButton from '@/components/KakaoShareButton.vue'
 const KAKAO = 'ae118806548ca1d60ddf5d35da105e7f'
 const route = useRoute()
 
-// 각 버튼별 임시 URL 설정
-const dadAttendingUrl = 'https://hshkjm251025.shop/invitatation'
-const dadNotAttendingUrl = 'https://hshkjm251025.shop/announcement'
-const defaultWithAccountUrl = 'https://hshkjm251025.shop/home'
-const defaultWithoutAccountUrl = 'https://hshkjm251025.shop/home'
+// invitation/index.vue와 동일한 데이터 구조 사용
+const weddingData = {
+  shareTitle: '승현 ♥ 정민 모바일 청첩장',
+  shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
+  shareImageUrl: 'https://hshkjm251025.shop/imgs/common/1-min.jpg',
+  shareWebUrl: 'https://hshkjm251025.shop/home'
+}
 
+// 각 버튼별 URL 설정 (동적으로 매칭)
+const dadAttendingUrl = 'https://hshkjm251025.shop/invitation'
+const dadNotAttendingUrl = 'https://hshkjm251025.shop/announcement'
+const defaultWithAccountUrl = weddingData.shareWebUrl
+const defaultWithoutAccountUrl = weddingData.shareWebUrl
 const galleryUrl = 'https://hshkjm251025.shop/wedding'
 
 const place = {
@@ -24,9 +31,9 @@ const place = {
 <template>
   <KakaoShareButton
     :kakao-key="KAKAO"
-    title="승현 ♥ 정민, 저희 결혼합니다!"
-    :description="`2025.10.25(토) 오전 11시30분 · ${place.guest}`"
-    image-url="https://hshkjm251025.shop/imgs/common/1-min.jpg"
+    :title="weddingData.shareTitle"
+    :description="weddingData.shareDescription"
+    :image-url="weddingData.shareImageUrl"
     :dad-attending-url="dadAttendingUrl"
     :dad-not-attending-url="dadNotAttendingUrl"
     :default-with-account-url="defaultWithAccountUrl"

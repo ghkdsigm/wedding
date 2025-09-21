@@ -21,13 +21,13 @@
 				</p>
 			</div>
 			
-			<!-- 청첩장 보기 버튼 -->
+			<!-- 동적 버튼 -->
 			<div class="mt-8 flex justify-center">
 				<button 
-					@click="goToHome"
+					@click="goToPage"
 					class="px-8 py-3 border border-gray-300 text-gray-600 rounded-full hover:bg-gray-50 transition-colors duration-200"
 				>
-					청첩장 보기
+					{{ props.buttonText }}
 				</button>
 			</div>
 		</div>
@@ -37,10 +37,15 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
+const props = defineProps({
+	buttonText: { type: String, default: '청첩장 보기' },
+	buttonUrl: { type: String, default: '/home' }
+})
+
 const router = useRouter()
 
-const goToHome = () => {
-	router.push('/home')
+const goToPage = () => {
+	router.push(props.buttonUrl)
 	// 페이지 이동 후 스크롤을 맨 위로
 	setTimeout(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })

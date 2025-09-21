@@ -95,9 +95,21 @@
         targetUrl = props.defaultWithAccountUrl
     }
     
-    // 기본 버튼: 모바일 청첩장 보기
+    // URL에 따라 동적으로 버튼 제목 설정
+    let buttonTitle = '청첩장 보기'
+    
+    if (targetUrl.includes('/invitation')) {
+      buttonTitle = '청첩장 보기'
+    } else if (targetUrl.includes('/announcement')) {
+      buttonTitle = '청첩장 보기'
+    } else if (targetUrl.includes('/home')) {
+      buttonTitle = '청첩장 보기'
+    } else if (targetUrl.includes('/wedding')) {
+      buttonTitle = '청첩장 보기'
+    }
+    
     const buttons = [
-      { title: '청첩장 보기', link: { mobileWebUrl: targetUrl, webUrl: targetUrl } },
+      { title: buttonTitle, link: { mobileWebUrl: targetUrl, webUrl: targetUrl } },
     ]
   
     // 갤러리 버튼: galleryUrl이 있으면 두 번째 버튼으로 추가
