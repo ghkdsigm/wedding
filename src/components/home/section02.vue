@@ -1,8 +1,8 @@
 <template>
   <!-- Full-screen section (same outer layout as Section01) -->
-  <section class="relative min-h-[100svh] w-full bg-white text-[#3f3a37] overflow-hidden">
+  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden pb-12">
     <!-- soft fabric-ish backdrop -->    
-    <div class="mx-auto w-full px-5 flex flex-col justify-center items-center h-full absolute">
+    <div class="mx-auto w-full px-5 flex flex-col justify-center items-center h-full">
       <!-- content card (텍스트 길이에 맞춰 자연스럽게) -->
       <div class="relative text-center">
         <!-- top small icon -->
