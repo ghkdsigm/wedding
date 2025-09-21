@@ -14,7 +14,7 @@ const routes = [
 	{ path: '/', component: Home },
 	{ path: '/home', component: HomeIndex },
 	{ path: '/share', component: ShareIndex },
-	{ path: '/invitatation', component: Invitatation },
+	{ path: '/invitation', component: Invitatation },
 	{ path: '/announcement', component: Announcement },
 	{ path: '/wedding', component: Wedding },
 	{ path: '/location', component: Location },
