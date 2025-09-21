@@ -42,7 +42,7 @@
 
       <!-- middle script text (below image) -->
       <div class="mt-4 text-center">
-        <p class="font-[500] italic text-sm font-goun-batang" :class="scriptFontClass">{{ scriptText }}</p>
+        <p class="font-[500] text-sm font-goun-batang font-bold" :class="scriptFontClass">{{ scriptText }}</p>
       </div>
 
       <!-- bottom date & venue (below image) -->

@@ -20,13 +20,13 @@
       <div class="space-y-6">
         <div class="flex items-center justify-between gap-3">
           <span class="text-sm">{{ groomLabel }}</span>
-          <button class="px-4 py-2 rounded-full text-white text-xs bg-[#97c2a9] hover:opacity-90" @click="openModal('groom')">
+          <button class="px-4 py-2 rounded-full text-xs border border-[#eee] hover:opacity-90" @click="openModal('groom')">
             계좌번호 보기
           </button>
         </div>
         <div class="flex items-center justify-between gap-3">
           <span class="text-sm">{{ brideLabel }}</span>
-          <button class="px-4 py-2 rounded-full text-white text-xs bg-[#f4b4b4] hover:opacity-90" @click="openModal('bride')">
+          <button class="px-4 py-2 rounded-full text-xs border border-[#eee] hover:opacity-90" @click="openModal('bride')">
             계좌번호 보기
           </button>
         </div>

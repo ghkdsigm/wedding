@@ -19,25 +19,14 @@
 				:key="i"
 				class="relative"
 			>
-				<!-- 배경 블러 이미지 -->
-				<div 
-					class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-					:style="{ backgroundImage: `url(${img})` }"
-					style="filter: blur(8px); transform: scale(1.1); will-change: transform, filter;"
-				></div>
-				
-				<!-- 중앙 선명한 이미지 영역 -->
-				<div class="relative z-10 w-full h-full flex items-center justify-center p-5">
-					<div class="w-full h-full max-w-4xl max-h-[80vh] rounded-lg overflow-hidden shadow-2xl">
-						<img
-							:src="img"
-							class="w-full h-full object-cover"
-							alt="메인 이미지"
-							:loading="i === 0 ? 'eager' : 'lazy'"
-							:decoding="i === 0 ? 'sync' : 'async'"
-						/>
-					</div>
-				</div>
+				<!-- 전체 화면 이미지 -->
+				<img
+					:src="img"
+					class="w-full h-full object-cover"
+					alt="메인 이미지"
+					:loading="i === 0 ? 'eager' : 'lazy'"
+					:decoding="i === 0 ? 'sync' : 'async'"
+				/>
 				
 				<!-- 필기체 오버레이 텍스트 -->
 				<!-- <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
@@ -54,7 +43,7 @@
 		</Swiper>
 
 		<!-- 썸네일 Swiper -->
-		<div class="absolute bottom-[7vh] left-1/2 -translate-x-1/2 z-10 w-[320px]">
+		<!-- <div class="absolute bottom-[7vh] left-1/2 -translate-x-1/2 z-10 w-[320px]">
 			<Swiper
 				@swiper="setThumbsSwiper"
 				:modules="[Thumbs]"
@@ -85,6 +74,11 @@
 					</div>
 				</SwiperSlide>
 			</Swiper>
+		</div> -->
+
+		<!-- ▼ 페이지 인디케이터 -->
+		<div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white z-20 text-sm font-goun-batang">
+			{{ currentSlide + 1 }}/{{ images.length }}
 		</div>
 
 		<!-- ▼ 스크롤 버튼 -->
@@ -106,6 +100,7 @@ import 'swiper/css'
 import 'swiper/css/thumbs'
 
 const activeThumbIndex = ref(0)
+const currentSlide = ref(0)
 
 const images = [
 	'/imgs/common/1-min.jpg',
@@ -184,6 +179,7 @@ const setThumbsSwiper = swiper => {
 const onMainSlideChange = swiper => {
 	const realIndex = swiper.realIndex
 	activeThumbIndex.value = realIndex
+	currentSlide.value = realIndex
 
 	if (thumbsSwiper.value) {
 		thumbsSwiper.value.slideTo(realIndex)

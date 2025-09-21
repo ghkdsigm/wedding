@@ -15,6 +15,9 @@
           <p class="mt-2 text-[clamp(10px,3.25vw,16px)] tracking-[0.4em] text-[#9b968f]">{{ notice }}</p>
         </div> -->
 
+        <!-- decorative line -->
+        <div class="w-10 h-px bg-[#E9E6E3] mx-auto mb-6"></div>
+        
         <!-- body text -->
         <p class="whitespace-pre-line text-sm leading-7 text-[#5c554f]">
           {{ currentBodyText }}

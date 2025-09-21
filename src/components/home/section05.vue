@@ -9,7 +9,7 @@
         <div class="py-4 text-center font-bold">
           <div class="flex flex-col items-center justify-center">
             <p class="text-[clamp(16px,5.5vw,28px)]">2025.{{ month }}</p>
-            <span class="text-[clamp(10px,3vw,14px)] text-[#8e877f] font-normal">sat. am 11:30</span>
+            <span class="text-[clamp(10px,3vw,14px)] text-[#8e877f] font-normal">토요일, 오전 11:30</span>
           </div>
         </div>
         <div class="h-px bg-[#CFCAC6]"></div>

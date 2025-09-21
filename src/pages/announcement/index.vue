@@ -114,7 +114,7 @@ const weddingData = {
   // Section03 데이터
   kakaoKey: 'ae118806548ca1d60ddf5d35da105e7f', // 실제 카카오 맵 API 키로 교체 필요
   venueName: '',
-  address: '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
+  address: '서울 강서구 양천로570(NH서울타워) 20층 \n더퍼스트클래스파티',
   tel: '02-2013-5670',
   lat: 37.557129,
   lng: 126.862107,
