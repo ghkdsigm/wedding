@@ -7,12 +7,12 @@ const KAKAO = 'ae118806548ca1d60ddf5d35da105e7f'
 const route = useRoute()
 
 // 각 버튼별 임시 URL 설정
-const dadAttendingUrl = 'https://adorable-faun-527e08.netlify.app/home'
-const dadNotAttendingUrl = 'https://adorable-faun-527e08.netlify.app/home2'
-const defaultWithAccountUrl = 'https://adorable-faun-527e08.netlify.app/home3'
-const defaultWithoutAccountUrl = 'https://adorable-faun-527e08.netlify.app/home4'
+const dadAttendingUrl = 'https://hshkjm251025.shop/home'
+const dadNotAttendingUrl = 'https://hshkjm251025.shop/home2'
+const defaultWithAccountUrl = 'https://hshkjm251025.shop/home3'
+const defaultWithoutAccountUrl = 'https://hshkjm251025.shop/home4'
 
-const galleryUrl = 'https://adorable-faun-527e08.netlify.app/wedding'
+const galleryUrl = 'https://hshkjm251025.shop/wedding'
 
 const place = {
   guest: '더퍼스트클래스파티 강서NH서울타워점',

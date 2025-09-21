@@ -148,8 +148,8 @@ const weddingData = {
     { bank: '국민', number: '848601-04-138274', holder: '황운' }
   ],
   brideAccounts: [
-    { bank: '신한', number: '444-55-666666', holder: '김정민' },    
-    { bank: '신한', number: '444-55-666666', holder: '권숙희' }
+    { bank: '국민', number: '90118120272', holder: '김정민' },    
+    { bank: '우리', number: '10025581443902', holder: '권숙희' }
   ],
     
   // Section05 데이터
@@ -170,8 +170,8 @@ const weddingData = {
   // Section07 데이터 (공유)
   shareTitle: '승현 ♥ 정민 모바일 청첩장',
   shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
-  shareImageUrl: 'https://adorable-faun-527e08.netlify.app/imgs/common/1-min.jpg',
-  shareWebUrl: 'https://adorable-faun-527e08.netlify.app/home'
+  shareImageUrl: 'https://hshkjm251025.shop/imgs/common/1-min.jpg',
+  shareWebUrl: 'https://hshkjm251025.shop/home'
 }
 </script>
 
