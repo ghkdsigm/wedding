@@ -12,6 +12,7 @@
       :wedding-date="weddingData.weddingDate"
     />
     <Section02
+      :notice="'안내합니다'"
       :body-text="weddingData.bodyText.nonGuest"
       :user-type="weddingData.userType"
       :groom-family="weddingData.groomFamily"

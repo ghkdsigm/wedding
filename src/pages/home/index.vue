@@ -11,6 +11,7 @@
       :wedding-date="weddingData.weddingDate"
     />
     <Section02
+      :notice="'초대합니다'"
       :body-text="weddingData.bodyText.guest"
       :user-type="weddingData.userType"
       :groom-family="weddingData.groomFamily"
