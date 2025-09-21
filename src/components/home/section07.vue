@@ -1,6 +1,6 @@
 <template>
   <!-- Share Section -->
-  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden py-12">
+  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden pt-0 pb-26">
     <div class="absolute inset-0 pointer-events-none"/>
 
     <div class="relative mx-auto w-full max-w-md px-5 py-6 flex flex-col justify-center items-center">

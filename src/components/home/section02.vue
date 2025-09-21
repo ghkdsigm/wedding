@@ -24,7 +24,7 @@
         </p>
 
         <!-- bottom family lines -->
-        <div class="mt-8 text-xs leading-6 text-[#6c625b]">
+        <div class="mt-8 text-sm leading-6 text-[#6c625b]">
           <p v-if="groomFamily">{{ groomFamily }}</p>
           <p v-if="brideFamily">{{ brideFamily }}</p>
         </div>
