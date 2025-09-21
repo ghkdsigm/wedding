@@ -35,10 +35,21 @@
     </div>
   </template>
   
-  <script setup>
-  import { onMounted } from 'vue'
-  
-  const props = defineProps({
+<script setup>
+import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+// 현재 페이지에 따라 description 설정
+const getDescription = () => {
+  if (route.path.includes('/announcement')) {
+    return '2025.10.25(토) 오전 11시30분'
+  }
+  return props.description
+}
+
+const props = defineProps({
     kakaoKey: { type: String, required: true },
     title: { type: String, default: '승현 ♥ 정민, 저희 결혼합니다!' },
     description: { type: String, default: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워' },
@@ -124,7 +135,7 @@
       objectType: 'feed',
       content: {
         title: props.title,
-        description: props.description,
+        description: getDescription(),
         imageUrl: props.imageUrl,
         link: { mobileWebUrl: targetUrl, webUrl: targetUrl },
       },

@@ -60,6 +60,14 @@ const props = defineProps({
 const router = useRouter()
 const route = useRoute()
 
+// 현재 페이지에 따라 description 설정
+const getDescription = () => {
+  if (route.path.includes('/announcement')) {
+    return '2025.10.25(토) 오전 11시30분'
+  }
+  return props.description
+}
+
 // 카카오 SDK 로드
 onMounted(async () => {
   if (!window.Kakao) await loadSdk()
@@ -82,7 +90,7 @@ function share() {
     objectType: 'feed',
     content: {
       title: props.title,
-      description: props.description,
+      description: getDescription(),
       imageUrl: props.imageUrl,
       link: { mobileWebUrl: props.webUrl, webUrl: props.webUrl },
     },
