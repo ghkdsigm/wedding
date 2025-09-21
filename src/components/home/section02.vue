@@ -6,14 +6,14 @@
       <!-- content card (텍스트 길이에 맞춰 자연스럽게) -->
       <div class="relative text-center">
         <!-- top small icon -->
-        <div class="mb-6">
+        <!-- <div class="mb-6">
           <slot name="icon">
             <svg class="w-6 h-6 text-[#8b9b7a] mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M3 12c3-1 7-4 9-9 2 5 6 8 9 9-5 2-8 6-9 9-1-3-4-7-9-9Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </slot>
           <p class="mt-2 text-[clamp(10px,3.25vw,16px)] tracking-[0.4em] text-[#9b968f]">{{ notice }}</p>
-        </div>
+        </div> -->
 
         <!-- body text -->
         <p class="whitespace-pre-line text-[clamp(10px,3.25vw,16px)] leading-7 text-[#5c554f]">

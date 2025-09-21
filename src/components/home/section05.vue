@@ -3,22 +3,22 @@
   <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden">
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
-    <div class="relative mx-auto w-full px-0 py-6 bg-[#eef5ee] ">
+    <div class="relative mx-auto w-full px-0 py-6 bg-[#E9E6E3] ">
       <div class="overflow-hidden p-6 max-w-xl mx-auto">
         <!-- Header -->
         <div class="py-4 text-center font-bold">
-          <div class="flex items-center justify-center gap-3">
+          <div class="flex flex-col items-center justify-center">
             <p class="text-[clamp(16px,5.5vw,28px)]">2025.{{ month }}</p>
             <span class="text-[clamp(10px,3vw,14px)] text-[#8e877f] font-normal">sat. am 11:30</span>
           </div>
         </div>
-        <div class="h-px bg-[#e8ded0]"></div>
+        <div class="h-px bg-[#CFCAC6]"></div>
 
         <!-- Weekdays -->
         <div class="grid grid-cols-7 text-center text-[clamp(10px,3vw,14px)] text-[#8e877f] py-2">
           <div v-for="d in weekdays" :key="d">{{ d }}</div>
         </div>
-        <div class="h-px bg-[#e8ded0]"></div>
+        <div class="h-px bg-[#CFCAC6]"></div>
 
         <!-- Dates -->
         <div class="grid grid-cols-7 gap-y-2 text-center select-none pt-2">

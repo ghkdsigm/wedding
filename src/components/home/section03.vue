@@ -13,8 +13,8 @@
 
       <!-- Action buttons -->
       <div v-if="tel || address" class="grid grid-cols-2 gap-2">
-        <button v-if="tel" @click="callTel" class="rounded-full bg-[#6b5a4d] text-white px-3 py-2 text-[clamp(8px,2.5vw,12px)] shadow hover:bg-[#5a4a3d] active:scale-95 transition-all duration-150">전화하기</button>
-        <button v-if="address" @click="copyAddress" class="rounded-full bg-white border border-[#ddd] px-3 py-2 text-[clamp(8px,2.5vw,12px)] shadow-sm hover:bg-gray-50 active:scale-95 transition-all duration-150">주소 복사</button>
+        <button v-if="tel" @click="callTel" class="rounded-full bg-[#6b5a4d] text-white px-3 py-2 text-[clamp(8px,2.5vw,12px)] hover:bg-[#5a4a3d] active:scale-95 transition-all duration-150">전화하기</button>
+        <button v-if="address" @click="copyAddress" class="rounded-full bg-white border border-[#ddd] px-3 py-2 text-[clamp(8px,2.5vw,12px)] hover:bg-gray-50 active:scale-95 transition-all duration-150">주소 복사</button>
       </div>
 
       <!-- Map area -->

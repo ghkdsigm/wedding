@@ -4,35 +4,29 @@
     <div class="absolute inset-0 pointer-events-none"/>
 
     <div class="relative mx-auto w-full max-w-md px-5 py-6 space-y-6">
-      <!-- Top notice (quick account text + misc) -->
-      <div class="rounded-xl border border-[#eee] bg-white/90 backdrop-blur p-4">
-        <!-- <div v-if="noticeAccounts?.length" class="space-y-1">
-          <p v-for="(t,i) in noticeAccounts" :key="i" class="text-[12px] text-[#5e554f]">{{ t }}</p>
-        </div> -->
-        <p v-if="extraNotice" class="text-[clamp(10px,3vw,14px)] text-[#9b948e]">{{ extraNotice }}</p>
-      </div>
+     
 
       <!-- Center title with divider -->
       <div class="flex items-center gap-4">
-        <div class="flex-1 h-px bg-[#ead9cf]"></div>
+        <div class="flex-1 h-px bg-[#eee]"></div>
         <div class="text-center">
           <p class="text-[clamp(10px,3.25vw,16px)] tracking-[0.3em] text-[#7f776f]">{{ sectionTitle }}</p>
         </div>
-        <div class="flex-1 h-px bg-[#ead9cf]"></div>
+        <div class="flex-1 h-px bg-[#eee]"></div>
       </div>
-      <p class="text-center text-[clamp(10px,3vw,14px)] text-[#9b948e] -mt-3">{{ sectionSubtitle }}</p>
+      
 
       <!-- Buttons: groom / bride -->
       <div class="space-y-6">
         <div class="flex items-center justify-between gap-3">
           <span class="text-[clamp(12px,3.5vw,16px)]">{{ groomLabel }}</span>
-          <button class="px-4 py-2 rounded-full text-white text-[clamp(10px,3vw,14px)] shadow bg-[#97c2a9] hover:opacity-90" @click="openModal('groom')">
+          <button class="px-4 py-2 rounded-full text-white text-[clamp(10px,3vw,14px)] bg-[#97c2a9] hover:opacity-90" @click="openModal('groom')">
             계좌번호 보기
           </button>
         </div>
         <div class="flex items-center justify-between gap-3">
           <span class="text-[clamp(12px,3.5vw,16px)]">{{ brideLabel }}</span>
-          <button class="px-4 py-2 rounded-full text-white text-[clamp(10px,3vw,14px)] shadow bg-[#f4b4b4] hover:opacity-90" @click="openModal('bride')">
+          <button class="px-4 py-2 rounded-full text-white text-[clamp(10px,3vw,14px)] bg-[#f4b4b4] hover:opacity-90" @click="openModal('bride')">
             계좌번호 보기
           </button>
         </div>
@@ -53,6 +47,14 @@
         <button class="mt-4 w-full h-10 rounded-xl text-[clamp(10px,3.25vw,16px)] bg-[#6b5a4d] text-white hover:opacity-90" @click="submitDummy">등록</button>
       </div> -->
     </div>
+
+     <!-- Top notice (quick account text + misc) -->
+     <div class="rounded-xl bg-white/90 backdrop-blur p-4">
+        <!-- <div v-if="noticeAccounts?.length" class="space-y-1">
+          <p v-for="(t,i) in noticeAccounts" :key="i" class="text-[12px] text-[#5e554f]">{{ t }}</p>
+        </div> -->
+        <p v-if="extraNotice" class="text-center text-[clamp(10px,3vw,14px)] text-[#9b948e]">{{ extraNotice }}</p>
+      </div>
 
     <!-- Modal for accounts -->
     <transition name="fade">

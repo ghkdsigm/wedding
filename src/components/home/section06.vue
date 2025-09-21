@@ -60,7 +60,6 @@
           </Swiper>
         </div>
         </div>
-        <p class="text-center text-sm text-gray-600 py-2 font-bold">이미지를 클릭하시면 확대보기가 가능합니다.</p>
       </div>
 
     <!-- 팝업 모달 -->
