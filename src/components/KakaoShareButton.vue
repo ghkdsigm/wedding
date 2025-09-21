@@ -40,7 +40,7 @@
   
   const props = defineProps({
     kakaoKey: { type: String, required: true },
-    title: { type: String, default: '승현 ♥ 정민 모바일 청첩장' },
+    title: { type: String, default: '승현 ♥ 정민, 저희 결혼합니다!' },
     description: { type: String, default: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워' },
     imageUrl: { type: String, required: true }, // 절대경로
     

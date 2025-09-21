@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <Section01
+      :title="weddingData.tit"
       :image-src="weddingData.imageSrc"
       :bridegroom="weddingData.bridegroom"
       :bride="weddingData.bride"
@@ -23,7 +24,7 @@
     />    
    
     
-    <Section03
+    <!-- <Section03
       :kakao-key="weddingData.kakaoKey"
       :venue-name="weddingData.venueName"
       :address="weddingData.address"
@@ -34,7 +35,7 @@
       :subway-info="weddingData.subwayInfo"
       :bus-info="weddingData.busInfo"
       :parking-info="weddingData.parkingInfo"
-    />
+    /> -->
 
     <Section04
       :notice-accounts="weddingData.noticeAccounts"
@@ -79,12 +80,13 @@ import Section07 from '@/components/home/section07.vue'
 const weddingData = {
   // Section01 데이터
   // imageSrc: '/src/assets/imgs/wedding.jpg',
+  tit: 'The WEDDING',
   imageSrc: '/imgs/common/10-min.jpg',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'The Start of Our Journey',
   dateText: '2025년 10월 25일 토요일 오전 11시30분',
-  venueText: '더퍼스트클래스파티 강서NH서울타워점',
+  venueText: '',
   scriptFontClass: '',
   weddingDate: '2025-10-25', // D-Day 계산용 (YYYY-MM-DD 형식)
   
@@ -128,7 +130,7 @@ const weddingData = {
   
   // Section03 데이터
   kakaoKey: 'ae118806548ca1d60ddf5d35da105e7f', // 실제 카카오 맵 API 키로 교체 필요
-  venueName: '더퍼스트클래스파티 강서NH서울타워점',
+  venueName: '',
   address: '서울 강서구 양천로570(NH서울타워) 20층 더퍼스트클래스파티',
   tel: '02-2013-5670',
   lat: 37.557129,
@@ -142,7 +144,7 @@ const weddingData = {
   noticeAccounts: [
     '농협 123-456788-7654321 예금주: 이지훈'
   ],
-  extraNotice: '화환은 정중히 사양합니다.',
+  extraNotice: '',
   sectionTitle: '마음 전하실 곳',
   sectionSubtitle: '마음을 전해주실 분들을 위해 계좌번호를 안내해드립니다.',
   groomLabel: '신랑측',
@@ -173,10 +175,10 @@ const weddingData = {
 
 
   // Section07 데이터 (공유)
-  shareTitle: '승현 ♥ 정민 모바일 청첩장',
-  shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
+  shareTitle: '승현 ♥ 정민, 저희 결혼합니다!',
+  shareDescription: '',
   shareImageUrl: 'https://hshkjm251025.shop/imgs/common/1-min.jpg',
-  shareWebUrl: 'https://hshkjm251025.shop/home'
+  shareWebUrl: 'https://hshkjm251025.shop/announcement'
 }
 </script>
 

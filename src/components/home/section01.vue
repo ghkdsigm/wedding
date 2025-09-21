@@ -20,7 +20,7 @@
           <div class="text-center">
             <!-- 폰트 테스트 -->
             <!-- <p class="text-xs text-white/50 mb-2 font-goun-batang">폰트 테스트: 고운바탕</p> -->
-            <p class="text-[clamp(8px,2.5vw,12px)] tracking-[0.35em] text-black/80 ">WEDDING Invitatation</p>
+            <p class="text-[clamp(8px,2.5vw,12px)] tracking-[0.35em] text-black/80 ">{{ title }}</p>
             <p class="mt-3 text-[clamp(12px,3.75vw,18px)] tracking-wide text-black font-medium font-goun-batang">
               {{ bridegroom }} <span class="text-black/70 text-[clamp(10px,3vw,14px)]">AND</span> {{ bride }}
             </p>
@@ -59,6 +59,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 // 부모로부터 받는 props만 정의 (기본값 없음)
 const props = defineProps([
+  'title',
   'imageSrc',
   'bridegroom', 
   'bride',

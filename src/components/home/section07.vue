@@ -51,7 +51,7 @@ import { useRouter, useRoute } from 'vue-router'
 // 부모로부터 받는 props
 const props = defineProps({
   kakaoKey: { type: String, required: true },
-  title: { type: String, default: '승현 ♥ 정민 모바일 청첩장' },
+  title: { type: String, default: '승현 ♥ 정민, 저희 결혼합니다!' },
   description: { type: String, default: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워' },
   imageUrl: { type: String, required: true },
   webUrl: { type: String, required: true },
@@ -98,6 +98,10 @@ function goToGallery() {
     path: '/wedding',
     query: { from: route.path }
   })
+  // 페이지 이동 후 스크롤을 맨 위로
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, 100)
 }
 </script>
 

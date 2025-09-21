@@ -52,6 +52,16 @@ const goToPage = () => {
 	// 이전 페이지 정보가 있으면 그 페이지로, 없으면 기본값 사용
 	let targetPath = fromPage || props.buttonUrl
 	
+	// query 파라미터가 없는 경우 기본 경로로 이동
+	if (!fromPage) {
+		targetPath = props.buttonUrl
+	}
+	
+	console.log('현재 경로:', route.path)
+	console.log('query.from:', fromPage)
+	console.log('props.buttonUrl:', props.buttonUrl)
+	console.log('최종 이동 경로:', targetPath)
+	
 	router.push(targetPath)
 	// 페이지 이동 후 스크롤을 맨 위로
 	setTimeout(() => {

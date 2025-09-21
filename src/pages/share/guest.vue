@@ -8,7 +8,7 @@ const route = useRoute()
 
 // invitation/index.vue와 동일한 데이터 구조 사용
 const weddingData = {
-  shareTitle: '승현 ♥ 정민 모바일 청첩장',
+  shareTitle: '승현 ♥ 정민, 저희 결혼합니다!',
   shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
   shareImageUrl: 'https://hshkjm251025.shop/imgs/common/1-min.jpg',
   shareWebUrl: 'https://hshkjm251025.shop/home'
