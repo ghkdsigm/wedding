@@ -18,14 +18,14 @@
           <div class="text-center">
             <!-- 폰트 테스트 -->
             <!-- <p class="text-xs text-white/50 mb-2 font-goun-batang">폰트 테스트: 고운바탕</p> -->
-            <p class="text-[clamp(8px,2.5vw,12px)] tracking-[0.35em] text-white/80 ">WEDDING INVITATION</p>
-            <p class="mt-3 text-[clamp(12px,3.75vw,18px)] tracking-wide text-white font-medium font-goun-batang">
-              {{ bridegroom }} <span class="text-white/70 text-[clamp(10px,3vw,14px)]">AND</span> {{ bride }}
+            <p class="text-[clamp(8px,2.5vw,12px)] tracking-[0.35em] text-black/80 ">WEDDING INVITATION</p>
+            <p class="mt-3 text-[clamp(12px,3.75vw,18px)] tracking-wide text-black font-medium font-goun-batang">
+              {{ bridegroom }} <span class="text-black/70 text-[clamp(10px,3vw,14px)]">AND</span> {{ bride }}
             </p>
             <!-- D-Day 표시 -->
             <div class="mt-4">
-              <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <p class="text-[clamp(10px,3vw,14px)] text-white font-medium">
+              <div class="inline-block  backdrop-blur-sm rounded-full px-4 py-1">
+                <p class="text-[clamp(10px,3vw,14px)] text-black font-medium">
                   {{ dDayText }}
                 </p>
               </div>

@@ -96,15 +96,43 @@ import 'swiper/css/thumbs'
 const activeThumbIndex = ref(0)
 
 const images = [
-	'https://www.iwedding.co.kr/center/iweddingb/product/800_17588_1730685980_90793400_3232256098.jpg',
-	'https://www.iwedding.co.kr/center/iweddingb/product/800_12710_1716273463_83445300_3232256100.jpg',
-	'https://www.iwedding.co.kr/center/iweddingb/product/800_14165_1711688929_18023400_3232256098.jpg',
-	'https://www.iwedding.co.kr/center/iweddingb/product/800_11806_1736932570_03864000_3232256098.jpg',
-	'https://cdn.imweb.me/upload/S201811245bf8fd46464e7/4eb0cd6ed2285.jpg',
+	'/src/assets/imgs/common/1.jpg',
+	'/src/assets/imgs/common/2.jpg',
+	'/src/assets/imgs/common/3.jpg',
+	'/src/assets/imgs/common/4.jpg',
+	'/src/assets/imgs/common/5.jpg',
+	'/src/assets/imgs/common/6.jpg',
+	'/src/assets/imgs/common/7.jpg',
+	'/src/assets/imgs/common/8.jpg',
+	'/src/assets/imgs/common/9.jpg',
+	'/src/assets/imgs/common/10.jpg',
+	'/src/assets/imgs/common/11.jpg',
+	'/src/assets/imgs/common/12.jpg',
+	'/src/assets/imgs/common/13.jpg',
+	'/src/assets/imgs/common/14.jpg',
+	'/src/assets/imgs/common/15.jpg',
+	'/src/assets/imgs/common/16.jpg',
+	'/src/assets/imgs/common/17.jpg',
+	'/src/assets/imgs/common/18.jpg',
+	'/src/assets/imgs/common/19.jpg',
 ]
 
 // 각 슬라이드별 필기체 텍스트
 const handwritingTexts = [
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
+	'MOMOSHOUSE',
 	'MOMOSHOUSE',
 	'MOMOSHOUSE',
 	'MOMOSHOUSE',
@@ -118,7 +146,21 @@ const subtitleTexts = [
 	'Better Together',
 	'Blessed Day',
 	'Happy Moments',
-	'Beautiful Life'
+	'Beautiful Life',
+	'Love Story',
+	'Sweet Memories',
+	'Forever & Always',
+	'Two Hearts',
+	'Perfect Match',
+	'Dream Wedding',
+	'Happily Ever After',
+	'Love & Laughter',
+	'Together Forever',
+	'Wedding Bliss',
+	'Romantic Moments',
+	'Cherished Memories',
+	'Love is Beautiful',
+	'Perfect Day'
 ]
 
 const thumbsSwiper = ref(null)
