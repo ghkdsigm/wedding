@@ -170,7 +170,7 @@ const weddingData = {
   // Section07 데이터 (공유)
   shareTitle: '승현 ♥ 정민 모바일 청첩장',
   shareDescription: '2025.10.25(토) 오전 11시30분 · 강서NH서울타워',
-  shareImageUrl: 'https://adorable-faun-527e08.netlify.app/imgs/1-min.jpg',
+  shareImageUrl: 'https://adorable-faun-527e08.netlify.app/imgs/common/1-min.jpg',
   shareWebUrl: 'https://adorable-faun-527e08.netlify.app/home'
 }
 </script>
