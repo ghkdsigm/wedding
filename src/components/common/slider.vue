@@ -6,6 +6,11 @@
 			:thumbs="{ swiper: thumbsSwiper }"
 			:loop="true"
 			:slidesPerView="1"
+			:preloadImages="false"
+			:lazy="true"
+			:watchSlidesProgress="true"
+			:resistanceRatio="0.85"
+			:speed="300"
 			class="w-full h-full z-0"
 			@slideChange="onMainSlideChange"
 		>
@@ -18,7 +23,7 @@
 				<div 
 					class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
 					:style="{ backgroundImage: `url(${img})` }"
-					style="filter: blur(8px); transform: scale(1.1);"
+					style="filter: blur(8px); transform: scale(1.1); will-change: transform, filter;"
 				></div>
 				
 				<!-- 중앙 선명한 이미지 영역 -->
@@ -28,6 +33,8 @@
 							:src="img"
 							class="w-full h-full object-cover"
 							alt="메인 이미지"
+							:loading="i === 0 ? 'eager' : 'lazy'"
+							:decoding="i === 0 ? 'sync' : 'async'"
 						/>
 					</div>
 				</div>
@@ -54,6 +61,9 @@
 				:spaceBetween="1"
 				:slidesPerView="5"
 				:centeredSlides="true"
+				:preloadImages="false"
+				:lazy="true"
+				:speed="200"
 			>
 				<SwiperSlide
 					v-for="(img, i) in images"
@@ -69,6 +79,8 @@
 							:src="img"
 							class="w-full h-full object-cover"
 							alt="썸네일"
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 				</SwiperSlide>
@@ -188,8 +200,8 @@ const scrollToNextSection = () => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz');
 
 .handwriting-text {
 	font-family: 'Dancing Script', 'Great Vibes', 'Parisienne', cursive !important;
@@ -197,12 +209,16 @@ const scrollToNextSection = () => {
 	font-weight: 400;
 	letter-spacing: 2px;
 	/* transform: rotate(-1deg); */
+	will-change: transform;
+	transform: translateZ(0);
 }
 
 .subtitle-text {
 	font-family: 'Playfair Display', 'Crimson Text', serif !important;
 	font-weight: 300;
 	letter-spacing: 1px;
+	will-change: transform;
+	transform: translateZ(0);
 }
 
 @keyframes fadeInScale {

@@ -11,6 +11,8 @@
           :src="imageSrc"
           alt="wedding"
           class="h-full w-full object-cover object-center"
+          loading="eager"
+          decoding="sync"
         />
         
         <!-- top captions floating on image -->
