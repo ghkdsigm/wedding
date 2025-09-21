@@ -17,7 +17,7 @@
 
         <!-- body text -->
         <p class="whitespace-pre-line text-[clamp(10px,3.25vw,16px)] leading-7 text-[#5c554f]">
-          {{ bodyText }}
+          {{ currentBodyText }}
         </p>
 
         <!-- bottom family lines -->
@@ -44,7 +44,12 @@ const props = defineProps([
 
 // userType에 따라 bodyText 선택
 const currentBodyText = computed(() => {
-  return props.bodyText[props.userType] || props.bodyText.guest
+  // bodyText가 객체인 경우 (guest/nonGuest 구조)
+  if (typeof props.bodyText === 'object' && props.bodyText !== null) {
+    return props.bodyText[props.userType] || props.bodyText.guest || ''
+  }
+  // bodyText가 문자열인 경우
+  return props.bodyText || ''
 })
 </script>
 

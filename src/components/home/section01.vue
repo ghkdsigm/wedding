@@ -6,7 +6,7 @@
 
     <div class="relative min-h-screen mx-auto w-full flex flex-col">
       <!-- photo area -->
-      <div class="relative h-[calc(100vh-10rem)] md:h-[auto] max-w-4xl mx-auto rounded-t-[18px] overflow-hidden bg-[#e9e4e1]">
+      <div class="relative h-[calc(100vh-10rem)] md:h-[auto] w-full max-w-none mx-auto overflow-hidden bg-[#e9e4e1]">
         <img
           :src="imageSrc"
           alt="wedding"
