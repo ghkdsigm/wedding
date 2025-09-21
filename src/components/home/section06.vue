@@ -1,6 +1,6 @@
 <template>
   <!-- Gallery Section -->
-  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden px-4">
+  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden px-6">
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 
     <div class="relative mx-auto w-full py-6">
