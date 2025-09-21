@@ -7,7 +7,10 @@
       <div class="overflow-hidden p-6 max-w-xl mx-auto">
         <!-- Header -->
         <div class="py-4 text-center font-bold">
-          <p class="text-[clamp(16px,5.5vw,28px)]">2025.{{ month }}</p>
+          <div class="flex items-center justify-center gap-3">
+            <p class="text-[clamp(16px,5.5vw,28px)]">2025.{{ month }}</p>
+            <span class="text-[clamp(10px,3vw,14px)] text-[#8e877f] font-normal">sat. am 11:30</span>
+          </div>
         </div>
         <div class="h-px bg-[#e8ded0]"></div>
 
@@ -24,6 +27,7 @@
                   class="inline-flex items-center justify-center w-8 h-8 rounded-full text-[clamp(10px,3vw,14px)]"
                   :class="{
                     'bg-[#6b5a4d] text-white font-medium shadow-sm': cell === selectedDay,
+                    'text-red-500 font-medium': [5, 12, 19, 26].includes(cell),
                     'text-[#9b948e]': !cell,
                   }">
               {{ cell }}
