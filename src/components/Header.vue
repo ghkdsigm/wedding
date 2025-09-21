@@ -6,7 +6,7 @@
 			>홈</router-link
 		>
 		<router-link
-			to="/invitation"
+			to="/invitatation"
 			class="hover:text-pink-500"
 			>청첩장</router-link
 		>
