@@ -6,15 +6,15 @@
     <div class="relative mx-auto w-full max-w-md px-5 py-5 space-y-4">
       <!-- Header: venue info -->
       <div class="rounded-xl border border-[#eee] bg-white/90 backdrop-blur p-4">
-        <h3 class="text-[clamp(12px,3.75vw,18px)] font-semibold break-words">{{ venueName }}</h3>
-        <p v-if="address" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5 break-words">{{ address }}</p>
+        <h3 class="text-sm font-semibold break-words">{{ venueName }}</h3>
+        <p v-if="address" class="text-xs text-[#6c625b] mt-0.5 break-words">{{ address }}</p>
         <p v-if="tel" class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-0.5">Tel. {{ tel }}</p>
       </div>
 
       <!-- Action buttons -->
       <div v-if="tel || address" class="grid grid-cols-2 gap-2">
-        <button v-if="tel" @click="callTel" class="rounded-full bg-[#6b5a4d] text-white px-3 py-2 text-[clamp(8px,2.5vw,12px)] hover:bg-[#5a4a3d] active:scale-95 transition-all duration-150">전화하기</button>
-        <button v-if="address" @click="copyAddress" class="rounded-full bg-white border border-[#ddd] px-3 py-2 text-[clamp(8px,2.5vw,12px)] hover:bg-gray-50 active:scale-95 transition-all duration-150">주소 복사</button>
+        <button v-if="tel" @click="callTel" class="rounded-full bg-[#6b5a4d] text-white px-3 py-2 text-sm hover:bg-[#5a4a3d] active:scale-95 transition-all duration-150">전화하기</button>
+        <button v-if="address" @click="copyAddress" class="rounded-full bg-white border border-[#ddd] px-3 py-2 text-sm hover:bg-gray-50 active:scale-95 transition-all duration-150">주소 복사</button>
       </div>
 
       <!-- Map area -->
@@ -46,18 +46,18 @@
       <!-- Guides -->
       <div class="pt-4 space-y-5">
         <div>
-          <h4 class="text-[clamp(10px,3.25vw,16px)] font-bold">지하철안내</h4>
-          <p class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-1 leading-6">{{ subwayInfo }}</p>
+          <h4 class="text-sm font-bold">지하철안내</h4>
+          <p class="text-xs text-[#6c625b] mt-1 leading-6">{{ subwayInfo }}</p>
         </div>
         <div class="h-px bg-[#eee]"></div>
         <div>
-          <h4 class="text-[clamp(10px,3.25vw,16px)] font-bold">버스안내</h4>
-          <p class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-1 leading-6 whitespace-pre-line">{{ busInfo }}</p>
+          <h4 class="text-sm font-bold">버스안내</h4>
+          <p class="text-xs text-[#6c625b] mt-1 leading-6 whitespace-pre-line">{{ busInfo }}</p>
         </div>
         <div class="h-px bg-[#eee]"></div>
         <div>
-          <h4 class="text-[clamp(10px,3.25vw,16px)] font-bold">주차안내</h4>
-          <p class="text-[clamp(10px,3vw,14px)] text-[#6c625b] mt-1 leading-6">{{ parkingInfo }}</p>
+          <h4 class="text-sm font-bold">주차안내</h4>
+          <p class="text-xs text-[#6c625b] mt-1 leading-6">{{ parkingInfo }}</p>
         </div>
       </div>
     </div>

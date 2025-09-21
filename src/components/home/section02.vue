@@ -16,12 +16,12 @@
         </div> -->
 
         <!-- body text -->
-        <p class="whitespace-pre-line text-[clamp(10px,3.25vw,16px)] leading-7 text-[#5c554f]">
+        <p class="whitespace-pre-line text-sm leading-7 text-[#5c554f]">
           {{ currentBodyText }}
         </p>
 
         <!-- bottom family lines -->
-        <div class="mt-8 text-[clamp(10px,3vw,14px)] leading-6 text-[#6c625b]">
+        <div class="mt-8 text-xs leading-6 text-[#6c625b]">
           <p v-if="groomFamily">{{ groomFamily }}</p>
           <p v-if="brideFamily">{{ brideFamily }}</p>
         </div>

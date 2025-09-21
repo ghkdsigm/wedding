@@ -20,14 +20,14 @@
           <div class="text-center">
             <!-- 폰트 테스트 -->
             <!-- <p class="text-xs text-white/50 mb-2 font-goun-batang">폰트 테스트: 고운바탕</p> -->
-            <p class="text-[clamp(8px,2.5vw,12px)] tracking-[0.35em] text-white/80 ">{{ title }}</p>
-            <p class="mt-1 text-[clamp(12px,3.75vw,18px)] tracking-wide text-white font-medium font-goun-batang">
+            <p class="text-xs tracking-[0.35em] text-white/80 ">{{ title }}</p>
+            <p class="mt-1 text-sm tracking-wide text-white font-medium font-goun-batang">
               {{ bridegroom }} <span class="text-white/70 text-[clamp(10px,3vw,14px)]">and</span> {{ bride }}
             </p>
             <!-- D-Day 표시 -->
             <div class="mt-4">
               <div class="inline-block  backdrop-blur-sm rounded-full px-4 py-1">
-                <p class="text-[clamp(10px,3vw,14px)] text-white font-medium">
+                <p class="text-sm text-white font-medium">
                   {{ dDayText }}
                 </p>
               </div>
@@ -42,11 +42,11 @@
 
       <!-- middle script text (below image) -->
       <div class="mt-4 text-center">
-        <p class="font-[500] italic text-[clamp(12px,3.75vw,18px)] font-goun-batang" :class="scriptFontClass">{{ scriptText }}</p>
+        <p class="font-[500] italic text-sm font-goun-batang" :class="scriptFontClass">{{ scriptText }}</p>
       </div>
 
       <!-- bottom date & venue (below image) -->
-      <div class="mt-2 text-center text-[clamp(10px,3vw,14px)] text-[#6c625b] leading-6 pb-3 font-goun-batang">
+      <div class="mt-2 text-center text-sm text-[#6c625b] leading-6 pb-3 font-goun-batang">
         <p>{{ dateText }}</p>
         <p>{{ venueText }}</p>
       </div>
