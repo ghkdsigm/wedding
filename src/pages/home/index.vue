@@ -75,7 +75,7 @@ import Section07 from '@/components/home/section07.vue'
 const weddingData = {
   // Section01 데이터
   // imageSrc: '/src/assets/imgs/wedding.jpg',
-  imageSrc: '/src/assets/imgs/common/10.jpg',
+  imageSrc: '/public/imgs/common/10-min.jpg',
   bridegroom: '황승현',
   bride: '김정민',
   scriptText: 'The Start of Our Journey',
