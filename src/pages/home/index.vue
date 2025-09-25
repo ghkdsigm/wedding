@@ -61,6 +61,8 @@
       :web-url="weddingData.shareWebUrl"
     />
 
+    <Section08 />
+
     
 
   </div>
@@ -74,6 +76,7 @@ import Section04 from '@/components/home/section04.vue'
 import Section05 from '@/components/home/section05.vue'
 import Section06 from '@/components/home/section06.vue'
 import Section07 from '@/components/home/section07.vue'
+import Section08 from '@/components/home/section08.vue'
 
 // 부모에서 모든 웨딩 데이터 관리
 const weddingData = {
