@@ -49,7 +49,7 @@ const isPlaying = ref(false)
 let player = null
 
 // 재생할 여러 유튜브 영상 ID
-const VIDEO_IDS = ['TcY_EkaZSNw','9hese2_Bbig', 'QLMzP4rhFT8'] // 원하는 만큼 추가
+const VIDEO_IDS = ['QLMzP4rhFT8', 'TcY_EkaZSNw','9hese2_Bbig'] // 원하는 만큼 추가
 
 function loadYouTubeAPI() {
   return new Promise((resolve) => {
