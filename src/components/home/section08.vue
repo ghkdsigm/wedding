@@ -141,7 +141,6 @@ const bannedWords = [
   '후레자식', '느금마', '애미뒤진', '애비없', '개년', '샤발', '거지', '그지', '좆병신', '시팔',
   '쌍놈','상놈','가난','걸뱅이','애미','섹스','유방','젖','후레','꼴려', '섹수', '젖탱','따먹','병신같',
 
-
   // 영어
   'fuck', 'fucking', 'fucker', 'motherfucker',
   'shit', 'bullshit', 'shitty',
@@ -347,7 +346,6 @@ onBeforeUnmount(() => {
   if (observer && sentinel.value) observer.unobserve(sentinel.value)
 })
 </script>
-
 
 <style scoped>
 /* 필요 시 추가 사용자 정의 스타일 작성 */

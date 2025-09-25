@@ -1,5 +1,5 @@
 <template>
-	<section class="relative w-screen h-screen bg-black overflow-hidden">
+	<section class="relative max-w-[640px] mx-auto w-screen h-screen bg-black overflow-hidden">
 		<!-- 메인 Swiper -->
 		<Swiper
 			:modules="[Thumbs]"

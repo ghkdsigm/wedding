@@ -1,6 +1,6 @@
 <template>
   <!-- Full-screen section (no phone frame) -->
-  <section class="relative min-h-[100svh] w-full bg-[#fff] text-[#3f3a37] overflow-hidden">
+  <section class="relative max-w-[640px] mx-auto min-h-[100svh] w-full bg-[#fff] text-[#3f3a37] overflow-hidden">
     <!-- soft fabric-ish backdrop -->
     <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_0%_0%,#ffffff_0%,transparent_60%),radial-gradient(80%_60%_at_100%_20%,#efe9e6_0%,transparent_60%)]"/>
 

@@ -1,6 +1,6 @@
 <template>
   <!-- Gallery Section -->
-  <section class="relative w-full bg-white text-[#3f3a37] overflow-hidden px-6">
+  <section class="relative max-w-[640px] mx-auto w-full bg-white text-[#3f3a37] overflow-hidden px-6">
     <div class="absolute inset-0 pointer-events-none"/>
 
     <div class="relative mx-auto w-full py-6">
