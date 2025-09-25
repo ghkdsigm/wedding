@@ -61,7 +61,7 @@
       :web-url="weddingData.shareWebUrl"
     />
 
-    <Section08 />
+    <!-- <Section08 /> -->
 
     <!-- <Section06
       :images="weddingData.galleryImages"
