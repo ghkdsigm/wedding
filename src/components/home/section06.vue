@@ -72,9 +72,9 @@
         <!-- 닫기 버튼 -->
         <button
           @click="closePopup"
-          class="absolute top-4 right-4 z-10 text-white text-2xl hover:text-gray-300 transition-colors"
+          class="absolute top-5 left-5 z-10 text-white text-sm hover:text-gray-300 transition-colors"
         >
-          ✕
+          Close
         </button>
 
         <!-- 팝업 내부 슬라이더 -->
