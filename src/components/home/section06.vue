@@ -152,7 +152,7 @@ const onMainSlideChange = swiper => {
 
 // 팝업 관련 함수들
 const openPopup = () => {
-  showPopup.value = true
+  //showPopup.value = true
 }
 
 const closePopup = () => {
