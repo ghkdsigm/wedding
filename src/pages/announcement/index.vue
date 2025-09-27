@@ -140,12 +140,16 @@ const weddingData = {
   
   // Section06 데이터 (갤러리 이미지)
   galleryImages: [
-    '/imgs/common/1-min.jpg',
-    '/imgs/common/2-min.jpg',
-    '/imgs/common/3-min.jpg',
-    '/imgs/common/4-min.jpg',
+    '/imgs/common/20-min.jpg',
+    '/imgs/common/10-min.jpg',
     '/imgs/common/5-min.jpg',
-    '/imgs/common/6-min.jpg',
+    '/imgs/common/4-min.jpg',
+    '/imgs/common/9-min.jpg',
+    '/imgs/common/17-min.jpg',
+    '/imgs/common/11-min.jpg',
+    //'/imgs/common/5-min.jpg',
+    //'/imgs/common/11-min.jpg',
+    //'/imgs/common/6-min.jpg',
   ],
 
 
