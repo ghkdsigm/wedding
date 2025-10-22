@@ -126,7 +126,7 @@ const weddingData = {
 	],
 	brideAccounts: [
 		{ bank: '국민', number: '90118120272', holder: '김정민' },
-		{ bank: '우리', number: '10025581443902', holder: '권숙희' },
+		{ bank: '우리', number: '1002558143902', holder: '권숙희' },
 	],
 
 	// Section05 데이터
